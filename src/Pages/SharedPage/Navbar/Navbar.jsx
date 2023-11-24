@@ -86,7 +86,7 @@ const NavBar = () => {
             </ul>
           </div>
           <div className=" flex items-center">
-            <img src={logo} className="h-28" alt="" />
+            <img src={logo} className="h-20" alt="" />
             <p className="text-3xl text-lime-500 font-bold">MediCamp</p>
           </div>
 
