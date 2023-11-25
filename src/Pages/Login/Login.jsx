@@ -5,6 +5,7 @@
 import { Helmet } from 'react-helmet';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import SocialLogin from '../SharedPage/socialLogin/SocialLogin';
 
 
 const Login = () => {
@@ -84,7 +85,7 @@ const Login = () => {
         </div>
       </form>
       <p className='px-6 mb-10'><small>New Here?<Link to='/register' className='text-blue-600 font-bold'>Create an account</Link> </small></p>
-      
+      <SocialLogin></SocialLogin>
     </div>
   </div>
 </div>
