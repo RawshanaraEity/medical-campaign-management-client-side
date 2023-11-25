@@ -2,6 +2,7 @@
 
 // import { useContext, useState } from 'react';
 // import { AuthContext } from '../../Providers/AuthProvider';
+import { Helmet } from 'react-helmet';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -51,7 +52,9 @@ const Login = () => {
 
     return (
         <div>
-             
+             <Helmet>
+                <title>MediCamp/Login</title>
+            </Helmet>
            <div className="hero min-h-screen bg-base-200 ">
   <div className="hero-content flex-col-reverse  md:flex-row-reverse">
     <div className="text-center md:w-1/2">
