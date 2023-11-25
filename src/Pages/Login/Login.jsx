@@ -3,7 +3,7 @@
 // import { useContext, useState } from 'react';
 // import { AuthContext } from '../../Providers/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
@@ -52,13 +52,13 @@ const Login = () => {
     return (
         <div>
              
-           <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col  md:flex-row-reverse">
-    <div className="text-center md:w-1/2 lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+           <div className="hero min-h-screen bg-base-200 ">
+  <div className="hero-content flex-col-reverse  md:flex-row-reverse">
+    <div className="text-center md:w-1/2">
+     <img src="https://i.ibb.co/FJh30mB/login1.jpg" alt="" />
     </div>
     <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100">
+    <h1 className="text-5xl text-center font-bold pt-5">Login now!</h1>
       <form  className="card-body">
         <div className="form-control">
           <label className="label">
@@ -80,7 +80,7 @@ const Login = () => {
           <input className="btn btn-primary" type="submit" value="Login" />
         </div>
       </form>
-      <p className='px-6'><small>New Here?<Link to='/register' className='text-blue-600 font-bold'>Create an account</Link> </small></p>
+      <p className='px-6 mb-10'><small>New Here?<Link to='/register' className='text-blue-600 font-bold'>Create an account</Link> </small></p>
       
     </div>
   </div>
