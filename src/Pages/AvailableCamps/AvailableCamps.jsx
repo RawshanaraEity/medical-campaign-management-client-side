@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet";
-import { useLoaderData } from "react-router-dom";
 import AvailableCampCard from "./AvailableCampCard";
+import useMediCamps from "../../Hooks/useMediCamps";
 
 const AvailableCamps = () => {
-  const allCamps = useLoaderData();
+  const [allCamps] = useMediCamps()
+  console.log(allCamps);
 
   return (
     <div>

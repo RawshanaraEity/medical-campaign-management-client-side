@@ -21,8 +21,7 @@ export const router = createBrowserRouter([
         },
         {
             path:'/availableCamps',
-            element: <AvailableCamps></AvailableCamps>,
-            loader: () => fetch('/camps.json')
+            element: <AvailableCamps></AvailableCamps>
         },
         {
             path: '/contact',
