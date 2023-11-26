@@ -1,0 +1,29 @@
+{
+    "testimonials": [
+      {
+        "campName": "Women's Wellness Camp",
+        "date": "2023-09-25",
+        "feedback": "Attending the Women's Wellness Camp was empowering. The discussions on women's health were insightful, and I left feeling more informed.",
+        "rating": 4.7
+      },
+      {
+        "campName": "Dental Health Awareness Camp",
+        "date": "2023-10-12",
+        "feedback": "I have always been anxious about dental check-ups, but the Dental Health Awareness Camp changed my perspective. The dentists were gentle and informative.",
+        "rating": 4.5
+      },
+      {
+        "campName": "Nutrition and Fitness Workshop",
+        "date": "2023-11-08",
+        "feedback": "The Nutrition and Fitness Workshop was a game-changer for me. I learned practical tips for a healthier lifestyle, and the fitness trainers were motivating.",
+        "rating": 4.9
+      },
+      {
+        "campName": "Community Mental Health Seminar",
+        "date": "2023-12-03",
+        "feedback": "The Community Mental Health Seminar was much needed. It addressed mental health stigma and provided resources for support. Kudos to the organizers!",
+        "rating": 4.8
+      }
+    ]
+  }
+  

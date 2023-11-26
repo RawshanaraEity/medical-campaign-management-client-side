@@ -2,10 +2,11 @@
 
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/images/logo.png'
+import useAuth from "../../../Hooks/useAuth";
 
 
 const NavBar = () => {
-//   const { logOut, user } = useContext(AuthContext);
+  const { logOut, user } = useAuth();
 
   const navLinks = (
     <>
@@ -23,7 +24,7 @@ const NavBar = () => {
       <li className="text-white text-lg font-medium mr-2">
         
         <NavLink
-          to="/addBlog"
+          to="/availableCamps"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-lime-400" : ""
           }
@@ -34,7 +35,7 @@ const NavBar = () => {
       <li className="text-white text-lg font-medium mr-2">
         
         <NavLink
-          to="/allBlogs"
+          to="/dashboard"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-lime-400" : ""
           }
@@ -45,7 +46,7 @@ const NavBar = () => {
       <li className="text-white text-lg font-medium mr-2">
         
         <NavLink
-          to="/featuredBlogs"
+          to="/contact"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-lime-400" : ""
           }
@@ -97,38 +98,13 @@ const NavBar = () => {
 
 
         <div className="navbar-end">
-          {/* {user?.email ? ( */}
+          {user?.email ? (
             <div>
-            <div className="hidden md:block">
-            <div className=" flex gap-2">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                  <div className="w-10 rounded-full">
-                    {/* <img src={user.photoURL? user.photoURL : `https://i.ibb.co/8X8stTp/user.webp`} alt={user.displayName} /> */}
-                  </div>
-                </label>
-                <ul className="flex items-center gap-2">
-                  <li>
-                    user name
-                    {/* <p className="text-xl text-white font-semibold">{user.displayName}</p> */}
-                  </li>
-                  <li>
-                    <button
-                      className="btn bg-slate-800 border-2 border-lime-600 text-white"
-                    //   onClick={logOut}
-                    >
-                      LogOut
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-              <div className="md:hidden ">
+              <div className=" ">
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
-                    userphoto
-                    {/* <img src={user.photoURL? user.photoURL : `https://i.ibb.co/8X8stTp/user.webp`} alt={user.displayName} /> */}
+                    <img src={user?.photoURL? user.photoURL : `https://i.ibb.co/8X8stTp/user.webp`} alt={user?.displayName} />
                   </div>
                 </label>
                 <ul
@@ -136,14 +112,13 @@ const NavBar = () => {
                   className="menu menu-sm dropdown-content mt-3 z-[1] shadow bg-slate-800 rounded-box"
                 >
                   <li>
-                    userNAme
-                  {/* <p className="text-sm text-white font-semibold">
-                    {user.displayName}</p> */}
+                  <p className="text-sm text-white font-semibold">
+                    {user?.displayName}</p>
                   </li>
                   <li>
                   <button
-                      className="btn bg-slate-800 border-2 text-lime-400  w-2/3 mx-auto pt-3 "
-                    //   onClick={logOut}
+                      className="btn  border-none  bg-lime-600 text-white  w-2/3 mx-auto pt-3 "
+                      onClick={logOut}
                     >
                       LogOut
                     </button>
@@ -153,11 +128,11 @@ const NavBar = () => {
               </div>
 
             </div>
-          {/* ) : ( */}
+           ) : ( 
             <Link to="/login">
               <button className="btn rounded-none border-none text-lg bg-lime-600 text-white">Login</button>
             </Link>
-          {/* )} */}
+           )} 
         </div>
       </div>
     </div>

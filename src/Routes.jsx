@@ -4,6 +4,8 @@ import Errorpage from "./Pages/ErrorPage/Errorpage";
 import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
+import Contact from "./Pages/Contact/Contact";
+import AvailableCamps from "./Pages/AvailableCamps/AvailableCamps";
 
 
 
@@ -16,6 +18,15 @@ export const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+            path:'/availableCamps',
+            element: <AvailableCamps></AvailableCamps>,
+            loader: () => fetch('/camps.json')
+        },
+        {
+            path: '/contact',
+            element: <Contact></Contact>
         },
         {
             path: '/login',

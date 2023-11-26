@@ -1,52 +1,51 @@
 
-
-// import { useContext, useState } from 'react';
-// import { AuthContext } from '../../Providers/AuthProvider';
 import { Helmet } from 'react-helmet';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import SocialLogin from '../SharedPage/socialLogin/SocialLogin';
+import useAuth from '../../Hooks/useAuth';
+
 
 
 const Login = () => {
-    // const {signIn} = useContext(AuthContext)
-    // const navigate = useNavigate()
-    // const location = useLocation()
+    const {signIn} = useAuth()
+    const navigate = useNavigate()
+    const location = useLocation()
 
-    // const from = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
    
 
-    // const handleLogin = (e) =>{
-    //     e.preventDefault()
-    //     const form = e.target;
-    //     const email = form.email.value;
-    //     const password = form.password.value;
-    //     console.log(email, password);
-    //     signIn(email,password)
-    //     .then(result =>{
-    //         const user = result.user;
-    //         console.log(user)
-    //         Swal.fire({
-    //             title: "User Logged in successfull",
-    //             showClass: {
-    //               popup: `
-    //                 animate__animated
-    //                 animate__fadeInUp
-    //                 animate__faster
-    //               `
-    //             },
-    //             hideClass: {
-    //               popup: `
-    //                 animate__animated
-    //                 animate__fadeOutDown
-    //                 animate__faster
-    //               `
-    //             }
-    //           });
-    //           navigate(from, {replace: true})
-    //     })
-    // }
+    const handleLogin = (e) =>{
+        e.preventDefault()
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+        signIn(email,password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user)
+            Swal.fire({
+                title: "User Logged in successfull",
+                showClass: {
+                  popup: `
+                    animate__animated
+                    animate__fadeInUp
+                    animate__faster
+                  `
+                },
+                hideClass: {
+                  popup: `
+                    animate__animated
+                    animate__fadeOutDown
+                    animate__faster
+                  `
+                }
+              });
+              navigate(from, {replace: true})
+        })
+    }
 
    
 
@@ -63,7 +62,7 @@ const Login = () => {
     </div>
     <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100">
     <h1 className="text-5xl text-center font-bold pt-5">Login now!</h1>
-      <form  className="card-body">
+      <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
