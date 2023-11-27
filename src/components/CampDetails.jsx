@@ -95,8 +95,8 @@ const CampDetails = () => {
                 </button>
               </form>
 
-              <h3 className="font-bold text-lg">Please Fillup This Form For Camp Registration</h3>
-           <RegisterForm></RegisterForm>
+              <h3 className="font-medium text-2xl mb-5 text-center">Please Fillup This Form For Camp Registration</h3>
+           <RegisterForm campData={campData}></RegisterForm>
 
 
             </div>

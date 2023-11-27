@@ -1,13 +1,83 @@
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
+import { useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 
-const RegisterForm = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+const RegisterForm = ({campData}) => {
+    const {campFees, _id} = campData
+    
+    const {user} = useAuth()
+    const navigate = useNavigate()
+    const location = useLocation()
+    const axiosPublic = useAxiosPublic()
+    
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+      } = useForm();
+    
+
+
+    const onSubmit = (data) =>{
+        console.log(data);
+      console.log(campData, user.email)
+      if(user && user.email){
+        // console.log(user.email, item)
+        //  send register item to the database
+        const registeredItem = {
+             email: user.email,
+             role: user.role,
+             name: data.name,
+             address: data.address,
+             age: data.age,
+             phone: data.phone,
+             gender: data.gender,
+             interest: data.interest,
+             campId: _id,
+             campFees
+
+        }
+
+        axiosPublic.post('/register', registeredItem)
+        .then(res =>{
+          console.log(res.data)
+          if(res.data.insertedId){
+            reset()
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: 'Registered successfully',
+              showConfirmButton: false,
+              timer: 1500
+            });
+           
+          }
+        })
+      }
+      else{
+        Swal.fire({
+          title: "You are not logged in?",
+          text: "Please login to add to the cart!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, login!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+          //  send the user to the login page
+          navigate('/login', {state: {from: location}})
+          }
+        });
+      }
+    }
+
+
+  
 
   return (
     <div>
@@ -88,6 +158,22 @@ const RegisterForm = () => {
         <div className="form-control flex-1">
               <label className="label">
                 <span className="label-text text-lg text-gray-600 font-medium">
+                  Camp Fees
+                </span>
+              </label>
+              <input
+                type="number"
+                {...register("campFees")}
+                name="campFees"
+                value={campFees}
+                className="input input-bordered"
+                readOnly
+              />
+            </div>
+        </div>
+        <div className="form-control flex-1">
+              <label className="label">
+                <span className="label-text text-lg text-gray-600 font-medium">
                   Your Interest
                 </span>
               </label>
@@ -100,9 +186,8 @@ const RegisterForm = () => {
                 required
               />
             </div>
-        </div>
         <div className="form-control  mt-6">
-          <input className="btn bg-lime-500 text-white " type="submit" value="Submit" />
+          <input  className="btn bg-lime-500 text-white " type="submit" value="Submit" />
         </div>
       </form>
     </div>

@@ -4,10 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import SocialLogin from "../SharedPage/socialLogin/SocialLogin";
 import useAuth from "../../Hooks/useAuth";
-// import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+
 
 const Register = () => {
-  // const axiosPublic = useAxiosPublic()
+  const axiosPublic = useAxiosPublic()
 
   const {
     register,
@@ -15,6 +16,8 @@ const Register = () => {
     reset,
     formState: { errors },
   } = useForm();
+
+
   const { createUser, updateUserProfile } = useAuth();
   const navigate = useNavigate();
 
@@ -28,13 +31,15 @@ const Register = () => {
         console.log("user profile info updated", res);
 
         // create user entry in the database
-        //   const userInfo = {
-        //     name: data.name,
-        //     email: data.email,
-        //   };
-        //   axiosPublic.post("/users", userInfo).then((res) => {
-        // if (res.data.insertedId) {
-        if (loggedUser) {
+          const userInfo = {
+            name: data.name,
+            photoUrl: data.photoUrl,
+            email: data.email,
+            role: data.role
+          };
+
+          axiosPublic.post("/users", userInfo).then((res) => {
+        if (res.data.insertedId) {
           console.log("user added to the database");
           reset();
           Swal.fire({
@@ -47,8 +52,8 @@ const Register = () => {
           navigate("/");
         }
       });
-      // })
-      // .catch((error) => console.log(error));
+      })
+      .catch((error) => console.log(error));
     });
   };
 
@@ -116,9 +121,9 @@ const Register = () => {
                   className="input input-bordered"
                   {...register("role")}
                 >
-                  <option value="organizers">Organizer</option>
-                  <option value="healthcareProfessionals">Healthcare Professional</option>
-                  <option value="participants">Participant</option>
+                  <option value="organizer">Organizer</option>
+                  <option value="healthcareProfessional">Healthcare Professional</option>
+                  <option value="participant">Participant</option>
                 </select>
               </div>
 

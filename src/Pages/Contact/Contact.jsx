@@ -19,7 +19,7 @@ const Contact = () => {
           Drop us a message for any query
         </h2>
         <div className="card rounded-none w-8/12 mx-auto my-10 bg-base-100 shadow-xl">
-          <div className="card-body flex-row gap-5 w-full">
+          <div className="card-body py-5 flex-row gap-5 w-full">
             <div className="form-control flex-1">
               <label className="label">
                 <span className="label-text text-lg text-gray-600 font-medium">
@@ -44,12 +44,12 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input input-bordered bg-lime-50"
                 required
               />
             </div>
           </div>
-          <div className="card-body flex-row gap-5 w-full">
+          <div className="card-body py-2 flex-row gap-5 w-full">
             <div className="form-control flex-1">
               <label className="label">
                 <span className="label-text text-lg text-gray-600 font-medium">
@@ -60,7 +60,7 @@ const Contact = () => {
                 type="number"
                 name="number"
                 placeholder="Your Phone"
-                className="input input-bordered"
+                className="input input-bordered bg-lime-50"
                 required
               />
             </div>
@@ -74,23 +74,23 @@ const Contact = () => {
                 type="text"
                 name="interest"
                 placeholder="Interest"
-                className="input input-bordered"
+                className="input input-bordered bg-lime-50"
                 required
               />
             </div>
           </div>
-          <div className="card-body  w-full">
+          <div className="card-body py-5 w-full">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-lg text-gray-600 font-medium">Your Message</span>
                 </label>
                 <textarea
-                  className="textarea textarea-bordered h-24"
+                  className="textarea textarea-bordered bg-lime-50 h-24"
                   placeholder=""
                 ></textarea>
               </div>
             </div>
-            <div className="card-body flex-row justify-between text-center">
+            <div className="card-body  flex-row justify-between text-center">
                 <div>
                 <h2 className="text-xl">For Emergency</h2>
                 <p className="font-bold text-lime-500">+442-4569-789</p>
