@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
@@ -25,32 +24,31 @@ const Register = () => {
       const loggedUser = result.user;
       console.log(loggedUser);
 
-      updateUserProfile(data?.name, data?.photoUrl)
-        .then((res) => {
-            console.log("user profile info updated", res);
-            
-          // create user entry in the database
+      updateUserProfile(data?.name, data?.photoUrl).then((res) => {
+        console.log("user profile info updated", res);
+
+        // create user entry in the database
         //   const userInfo = {
         //     name: data.name,
         //     email: data.email,
         //   };
         //   axiosPublic.post("/users", userInfo).then((res) => {
-            // if (res.data.insertedId) {
-                if(loggedUser){
-              console.log("user added to the database");
-              reset();
-              Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "User created successfully",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-              navigate("/");
-            }
+        // if (res.data.insertedId) {
+        if (loggedUser) {
+          console.log("user added to the database");
+          reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "User created successfully",
+            showConfirmButton: false,
+            timer: 1500,
           });
-        // })
-        // .catch((error) => console.log(error));
+          navigate("/");
+        }
+      });
+      // })
+      // .catch((error) => console.log(error));
     });
   };
 
@@ -59,19 +57,12 @@ const Register = () => {
       <Helmet>
         <title>MediCamp/Signup</title>
       </Helmet>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">SignUP!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-          </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <div className=" bg-base-200">
+        <h1 className="text-5xl pt-10 text-center font-bold">SignUP!</h1>
+          <div className="card mt-10 w-5/12 mx-auto shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-              <div className="form-control">
+             <div className="flex gap-5">
+             <div className="form-control flex-1">
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
@@ -86,7 +77,7 @@ const Register = () => {
                   <span className="text-red-600">Name is required</span>
                 )}
               </div>
-              <div className="form-control">
+              <div className="form-control flex-1">
                 <label className="label">
                   <span className="label-text">Photo Url</span>
                 </label>
@@ -100,6 +91,7 @@ const Register = () => {
                   <span className="text-red-600">Photo Url is required</span>
                 )}
               </div>
+             </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -115,6 +107,21 @@ const Register = () => {
                   <span className="text-red-600">Email is required</span>
                 )}
               </div>
+
+              <div className="form-control flex-1">
+                <label className="label">
+                  <span className="label-text ">Role</span>
+                </label>
+                <select
+                  className="input input-bordered"
+                  {...register("role")}
+                >
+                  <option value="organizers">Organizer</option>
+                  <option value="healthcareProfessionals">Healthcare Professional</option>
+                  <option value="participants">Participant</option>
+                </select>
+              </div>
+
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
@@ -157,22 +164,22 @@ const Register = () => {
               </div>
               <div className="form-control mt-6">
                 <input
-                  className="btn btn-primary"
+                  className="btn bg-lime-500 text-white"
                   type="submit"
                   value="SignUp"
                 />
               </div>
             </form>
             <p className="px-6">
-              <small>
-                Already have an account?<Link to="/login">Login</Link>{" "}
+              <small className="text-lg">
+                Already have an account?<Link to="/login"><span className="text-lime-500 font-bold"> Login</span></Link>{" "}
               </small>
             </p>
             <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

@@ -109,7 +109,7 @@ const NavBar = () => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[1] shadow bg-slate-800 rounded-box"
+                  className="menu menu-sm dropdown-content mt-3 z-[1] shadow bg-slate-800 "
                 >
                   <li>
                   <p className="text-sm text-white font-semibold">
@@ -117,7 +117,7 @@ const NavBar = () => {
                   </li>
                   <li>
                   <button
-                      className="btn  border-none  bg-lime-600 text-white  w-2/3 mx-auto pt-3 "
+                      className="btn  border-none rounded-none  bg-lime-600 text-white  w-full mx-auto pt-3 "
                       onClick={logOut}
                     >
                       LogOut
