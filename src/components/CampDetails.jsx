@@ -16,7 +16,7 @@ const CampDetails = () => {
       .then((response) => {
         setCampData(response.data);
       })
-      .then((error) => {
+      .catch((error) => {
         console.error("Error fetching camp data:", error);
       });
   }, [axiosPublic, id]);
