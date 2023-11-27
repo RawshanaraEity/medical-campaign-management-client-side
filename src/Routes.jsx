@@ -6,6 +6,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Contact from "./Pages/Contact/Contact";
 import AvailableCamps from "./Pages/AvailableCamps/AvailableCamps";
+import CampDetails from "./components/CampDetails";
 
 
 
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
         {
             path:'/availableCamps',
             element: <AvailableCamps></AvailableCamps>
+        },
+        {
+            path: '/camp-details/:id',
+            element: <CampDetails></CampDetails>
         },
         {
             path: '/contact',

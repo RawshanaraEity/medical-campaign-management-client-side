@@ -25,7 +25,7 @@ const Register = () => {
       const loggedUser = result.user;
       console.log(loggedUser);
 
-      updateUserProfile(data.name, data.photoUrl)
+      updateUserProfile(data?.name, data?.photoUrl)
         .then((res) => {
             console.log("user profile info updated", res);
             
