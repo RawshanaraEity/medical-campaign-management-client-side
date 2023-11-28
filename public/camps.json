@@ -1,216 +1,255 @@
-
 [
-    {
-      "campName": "Community Health Awareness Camp",
-      "image": "https://i.ibb.co/h7JWxkR/david-todd-mccarty-Urd-Kj-Ylg-N7k-unsplash.jpg",
-      "campFees": 23,
-      "scheduledDate": "2023-03-20",
-      "scheduledTime": "9:00 AM - 4:00 PM",
-      "venueLocation": "City Park",
-      "specializedServices": ["General Check-ups", "Vitamin and Nutrition Consultation", "Distribution of Preventives"],
-      "healthcareProfessionals": ["Doctor (General Practitioner)", "Doctor (Gynecologist)", "Paramedical Staff"],
-      "targetAudience": "General Public",
-      "participantCount": 120,
-      "description": "The Community Health Awareness Camp aims to provide comprehensive health services and education to the general public. Join us for a day filled with health check-ups, personalized consultations, and the distribution of preventive measures. Our experienced healthcare professionals are dedicated to promoting overall well-being and addressing individual health concerns.",
-      "benefits": [
-        "Comprehensive health check-ups for all participants",
-        "Expert consultations on vitamin and nutrition needs",
-        "Distribution of preventive measures and health resources",
-        "Engaging sessions with healthcare professionals",
-        "Opportunity to connect with like-minded individuals in the community"
-      ]
-    },
-    {
-      "campName": "Pediatric Health Camp",
-      "image": "https://i.ibb.co/LgHgmb4/p2.jpg",
-      "campFees": 15,
-      "scheduledDate": "2023-04-10",
-      "scheduledTime": "10:00 AM - 3:00 PM",
-      "venueLocation": "Children's Hospital",
-      "specializedServices": ["Vaccination Services", "Growth Monitoring", "Maternal and Child Health Consultation"],
-      "healthcareProfessionals": ["Pediatrician", "Child Health Specialist"],
-      "targetAudience": "Children and their Parents",
-      "participantCount": 90,
-      "description": "The Pediatric Health Camp focuses on the well-being of children and provides essential services like vaccinations, growth monitoring, and maternal and child health consultations. Our dedicated healthcare professionals ensure a child-friendly environment and address all parental concerns.",
-      "benefits": [
-        "Comprehensive pediatric health services",
-        "Vaccination services for children",
-        "Expert consultations on child growth and development",
-        "Parental guidance and support"
-      ]
-    },
-    {
-      "campName": "Senior Health Check-up Camp",
-      "image": "https://i.ibb.co/FV8tTqG/senior.jpg",
-      "campFees": 20,
-      "scheduledDate": "2023-05-05",
-      "scheduledTime": "11:00 AM - 2:00 PM",
-      "venueLocation": "Senior Center",
-      "specializedServices": ["Comprehensive Health Assessment", "Fitness Sessions", "Social Activities"],
-      "healthcareProfessionals": ["Senior Health Check-up Team", "Fitness Trainer"],
-      "targetAudience": "Elderly Individuals",
-      "participantCount": 75,
-      "description": "The Senior Health Check-up Camp caters to the health needs of the elderly. Our team offers comprehensive health assessments, fitness sessions, and engaging social activities to promote a healthy and active lifestyle among seniors.",
-      "benefits": [
-        "Thorough health assessments for seniors",
-        "Tailored fitness sessions for elderly individuals",
-        "Social activities to foster community engagement",
-        "Opportunity to connect with peers"
-      ]
-    },
-    {
-      "campName": "Maternal and Child Health Camp",
-      "image": "https://i.ibb.co/qWBDBP6/p9.jpg",
-      "campFees": 25,
-      "scheduledDate": "2023-06-15",
-      "scheduledTime": "9:30 AM - 3:30 PM",
-      "venueLocation": "Maternity Hospital",
-      "specializedServices": ["Pregnancy Examinations", "Child Health Consultation", "Breast Care"],
-      "healthcareProfessionals": ["Maternity and Child Health Doctors", "Distribution of Preventives"],
-      "targetAudience": "Pregnant Mothers and Children",
-      "participantCount": 100,
-      "description": "The Maternal and Child Health Camp is designed to support expectant mothers and address child health concerns. Our healthcare professionals provide pregnancy examinations, child health consultations, and guidance on breastfeeding and maternal care.",
-      "benefits": [
-        "Specialized care for pregnant mothers",
-        "Expert consultations on child health",
-        "Distribution of maternal and child health resources",
-        "Breast care guidance"
-      ]
-    },
-    {
-      "campName": "Dental Health Awareness Camp",
-      "image": "https://i.ibb.co/M23ymtq/pexels-andrea-piacquadio-3881170.jpg",
-      "campFees": 18,
-      "scheduledDate": "2023-07-12",
-      "scheduledTime": "2:00 PM - 5:00 PM",
-      "venueLocation": "Dental Clinic",
-      "specializedServices": ["Dental Check-ups", "Oral Hygiene Education", "Distribution of Dental Kits"],
-      "healthcareProfessionals": ["Dentist", "Dental Hygienist"],
-      "targetAudience": "General Public",
-      "participantCount": 80,
-      "description": "The Dental Health Awareness Camp promotes oral health and hygiene. Participants can benefit from dental check-ups, oral hygiene education, and the distribution of dental kits. Our dental professionals aim to raise awareness about the importance of dental care.",
-      "benefits": [
-        "Comprehensive dental check-ups",
-        "Education on oral hygiene practices",
-        "Distribution of dental care kits",
-        "Opportunity to consult with dental professionals"
-      ]
-    },
-    {
-      "campName": "Cardiovascular Health Camp",
-      "image": "https://i.ibb.co/0j9cyLW/cardiac.jpg",
-      "campFees": 30,
-      "scheduledDate": "2023-08-08",
-      "scheduledTime": "8:00 AM - 1:00 PM",
-      "venueLocation": "Heart Health Center",
-      "specializedServices": ["Cardiac Screening", "Nutrition Counseling", "Fitness Assessments"],
-      "healthcareProfessionals": ["Cardiologist", "Nutritionist", "Fitness Trainer"],
-      "targetAudience": "Adults at Risk of Heart Disease",
-      "participantCount": 60,
-      "description": "The Cardiovascular Health Camp is dedicated to preventing heart disease. Attendees can undergo cardiac screenings, receive nutrition counseling, and participate in fitness assessments. Our healthcare professionals focus on promoting heart-healthy lifestyles.",
-      "benefits": [
-        "Cardiac screenings for early detection",
-        "Nutrition counseling for heart-healthy diets",
-        "Fitness assessments and tailored exercise plans",
-        "Education on heart disease prevention"
-      ]
-    },
-    {
-      "campName": "Diabetes Awareness and check-up Camp",
-      "image": "https://i.ibb.co/8MCfgHS/p8.jpg",
-      "campFees": 22,
-      "scheduledDate": "2023-09-10",
-      "scheduledTime": "10:30 AM - 3:30 PM",
-      "venueLocation": "Diabetes Care Center",
-      "specializedServices": ["Blood Glucose Testing", "Nutritional Guidance", "Medication Consultations"],
-      "healthcareProfessionals": ["Endocrinologist", "Dietitian", "Diabetes Educator"],
-      "targetAudience": "Individuals with Diabetes",
-      "participantCount": 50,
-      "description": "The Diabetes Awareness and Management Camp provides support to individuals with diabetes. Services include blood glucose testing, nutritional guidance, and medication consultations. Our healthcare professionals aim to empower individuals to manage diabetes effectively.",
-      "benefits": [
-        "Regular blood glucose testing",
-        "Personalized nutritional guidance",
-        "Consultations with diabetes care experts",
-        "Education on diabetes management"
-      ]
-    },
-    {
-      "campName": "Mental Health and Well-being Camp",
-      "image": "https://i.ibb.co/dDYzJ9z/mental.jpg",
-      "campFees": 28,
-      "scheduledDate": "2023-10-15",
-      "scheduledTime": "11:00 AM - 4:00 PM",
-      "venueLocation": "Mental Health Center",
-      "specializedServices": ["Counseling Sessions", "Mindfulness Workshops", "Stress Management"],
-      "healthcareProfessionals": ["Psychiatrist", "Psychologist", "Counselor"],
-      "targetAudience": "Individuals Seeking Mental Health Support",
-      "participantCount": 70,
-      "description": "The Mental Health and Well-being Camp focuses on mental health awareness and support. Attendees can participate in counseling sessions, mindfulness workshops, and stress management activities. Our mental health professionals aim to promote overall well-being.",
-      "benefits": [
-        "Access to counseling and support services",
-        "Participation in mindfulness workshops",
-        "Techniques for stress management",
-        "Community engagement for mental health awareness"
-      ]
-    },
-    {
-      "campName": "Women's Health and Wellness Camp",
-      "image": "https://i.ibb.co/9NH7CLB/women5.jpg",
-      "campFees": 25,
-      "scheduledDate": "2023-11-20",
-      "scheduledTime": "10:00 AM - 3:00 PM",
-      "venueLocation": "Women's Health Center",
-      "specializedServices": ["Women's Health Screenings", "Reproductive Health Education", "Fitness Workshops"],
-      "healthcareProfessionals": ["Gynecologist", "Women's Health Nurse", "Fitness Instructor"],
-      "targetAudience": "Women of All Ages",
-      "participantCount": 90,
-      "description": "The Women's Health and Wellness Camp offers a range of services to support women's health. Attendees can undergo women's health screenings, receive reproductive health education, and participate in fitness workshops. Our healthcare professionals focus on empowering women to prioritize their well-being.",
-      "benefits": [
-        "Comprehensive women's health screenings",
-        "Education on reproductive health",
-        "Participation in fitness workshops",
-        "Empowerment for women's overall well-being"
-      ]
-    },
-    {
-      "campName": "Cancer Awareness and Prevention Camp",
-      "image": "https://i.ibb.co/VTXs6dd/cancer.jpg",
-      "campFees": 35,
-      "scheduledDate": "2023-12-05",
-      "scheduledTime": "9:30 AM - 3:30 PM",
-      "venueLocation": "Cancer Care Center",
-      "specializedServices": ["Cancer Screenings", "Educational Seminars", "Supportive Resources"],
-      "healthcareProfessionals": ["Oncologist", "Cancer Nurse", "Supportive Care Specialist"],
-      "targetAudience": "Individuals Interested in Cancer Prevention",
-      "participantCount": 80,
-      "description": "The Cancer Awareness and Prevention Camp focuses on early detection and prevention of cancer. Attendees can undergo cancer screenings, attend educational seminars, and access supportive resources. Our healthcare professionals aim to raise awareness and provide support to those interested in cancer prevention.",
-      "benefits": [
-        "Comprehensive cancer screenings",
-        "Educational seminars on cancer prevention",
-        "Access to supportive resources and counseling",
-        "Community engagement for cancer awareness"
-      ]
-    },
-    {
-      "campName": "Respiratory Health Camp",
-      "image": "https://i.ibb.co/9H7sXpb/women4.jpg",
-      "campFees": 18,
-      "scheduledDate": "2024-01-15",
-      "scheduledTime": "8:00 AM - 1:00 PM",
-      "venueLocation": "Respiratory Care Center",
-      "specializedServices": ["Lung Function Tests", "Respiratory Health Education", "Smoking Cessation Support"],
-      "healthcareProfessionals": ["Respiratory Therapist", "Pulmonologist", "Smoking Cessation Counselor"],
-      "targetAudience": "Individuals with Respiratory Concerns",
-      "participantCount": 60,
-      "description": "The Respiratory Health Camp is dedicated to addressing the respiratory concerns of individuals. Join us for lung function tests, respiratory health education, and personalized support for smoking cessation. Our experienced healthcare professionals are committed to improving respiratory well-being and providing valuable guidance.",
-      "benefits": [
-              "Comprehensive lung function tests for participants",
-              "Educational sessions on respiratory health",
-              "Individualized support for smoking cessation",
-              "Access to respiratory therapists and pulmonologists",
-              "Opportunity to connect with others facing similar concerns"
-            ]
-     },
+  {
+    "campName": "Community Health Awareness Camp",
+    "image": "https://i.ibb.co/h7JWxkR/david-todd-mccarty-Urd-Kj-Ylg-N7k-unsplash.jpg",
+    "campFees": 23,
+    "scheduledDate": "2023-03-20",
+    "scheduledTime": "9:00 AM - 4:00 PM",
+    "venueLocation": "City Park",
+    "specializedServices": ["General Check-ups", "Vitamin and Nutrition Consultation", "Distribution of Preventives"],
+    "healthcareProfessionals": [
+      "Dr. John Doe, General Practitioner",
+      "Dr. Jane Smith, Gynecologist",
+      "Nurse John, Paramedical Staff"
+    ],
+    "targetAudience": "General Public",
+    "participantCount": 0,
+    "description": "The Community Health Awareness Camp aims to provide comprehensive health services and education to the general public. Join us for a day filled with health check-ups, personalized consultations, and the distribution of preventive measures. Our experienced healthcare professionals are dedicated to promoting overall well-being and addressing individual health concerns.",
+    "benefits": [
+      "Comprehensive health check-ups for all participants",
+      "Expert consultations on vitamin and nutrition needs",
+      "Distribution of preventive measures and health resources",
+      "Engaging sessions with healthcare professionals",
+      "Opportunity to connect with like-minded individuals in the community"
+    ]
+  },
+  {
+    "campName": "Pediatric Health Camp",
+    "image": "https://i.ibb.co/LgHgmb4/p2.jpg",
+    "campFees": 15,
+    "scheduledDate": "2023-04-10",
+    "scheduledTime": "10:00 AM - 3:00 PM",
+    "venueLocation": "Children's Hospital",
+    "specializedServices": ["Vaccination Services", "Growth Monitoring", "Maternal and Child Health Consultation"],
+    "healthcareProfessionals": [
+      "Dr. Mark Johnson, Pediatrician",
+      "Dr. Emily Davis, Child Health Specialist"
+    ],
+    "targetAudience": "Children and their Parents",
+    "participantCount": 0,
+    "description": "The Pediatric Health Camp focuses on the well-being of children and provides essential services like vaccinations, growth monitoring, and maternal and child health consultations. Our dedicated healthcare professionals ensure a child-friendly environment and address all parental concerns.",
+    "benefits": [
+      "Comprehensive pediatric health services",
+      "Vaccination services for children",
+      "Expert consultations on child growth and development",
+      "Parental guidance and support"
+    ]
+  },
+  {
+    "campName": "Senior Health Check-up Camp",
+    "image": "https://i.ibb.co/FV8tTqG/senior.jpg",
+    "campFees": 20,
+    "scheduledDate": "2023-05-05",
+    "scheduledTime": "11:00 AM - 2:00 PM",
+    "venueLocation": "Senior Center",
+    "specializedServices": ["Comprehensive Health Assessment", "Fitness Sessions", "Social Activities"],
+    "healthcareProfessionals": [
+      "Dr. Sarah White, Senior Health Check-up Team",
+      "Mr. Robert Brown, Fitness Trainer"
+    ],
+    "targetAudience": "Elderly Individuals",
+    "participantCount": 0,
+    "description": "The Senior Health Check-up Camp caters to the health needs of the elderly. Our team offers comprehensive health assessments, fitness sessions, and engaging social activities to promote a healthy and active lifestyle among seniors.",
+    "benefits": [
+      "Thorough health assessments for seniors",
+      "Tailored fitness sessions for elderly individuals",
+      "Social activities to foster community engagement",
+      "Opportunity to connect with peers"
+    ]
+  },
+  {
+    "campName": "Maternal and Child Health Camp",
+    "image": "https://i.ibb.co/qWBDBP6/p9.jpg",
+    "campFees": 25,
+    "scheduledDate": "2023-06-15",
+    "scheduledTime": "9:30 AM - 3:30 PM",
+    "venueLocation": "Maternity Hospital",
+    "specializedServices": ["Pregnancy Examinations", "Child Health Consultation", "Breast Care"],
+    "healthcareProfessionals": [
+      "Dr. Amanda Miller, Maternity and Child Health Doctors",
+      "Nurse Rachel, Distribution of Preventives"
+    ],
+    "targetAudience": "Pregnant Mothers and Children",
+    "participantCount": 0,
+    "description": "The Maternal and Child Health Camp is designed to support expectant mothers and address child health concerns. Our healthcare professionals provide pregnancy examinations, child health consultations, and guidance on breastfeeding and maternal care.",
+    "benefits": [
+      "Specialized care for pregnant mothers",
+      "Expert consultations on child health",
+      "Distribution of maternal and child health resources",
+      "Breast care guidance"
+    ]
+  },
+  {
+    "campName": "Dental Health Awareness Camp",
+    "image": "https://i.ibb.co/M23ymtq/pexels-andrea-piacquadio-3881170.jpg",
+    "campFees": 18,
+    "scheduledDate": "2023-07-12",
+    "scheduledTime": "2:00 PM - 5:00 PM",
+    "venueLocation": "Dental Clinic",
+    "specializedServices": ["Dental Check-ups", "Oral Hygiene Education", "Distribution of Dental Kits"],
+    "healthcareProfessionals": [
+      "Dr. Michael Brown, Dentist",
+      "Ms. Emily Wilson, Dental Hygienist"
+    ],
+    "targetAudience": "General Public",
+    "participantCount": 0,
+    "description": "The Dental Health Awareness Camp promotes oral health and hygiene. Participants can benefit from dental check-ups, oral hygiene education, and the distribution of dental kits. Our dental professionals aim to raise awareness about the importance of dental care.",
+    "benefits": [
+      "Comprehensive dental check-ups",
+      "Education on oral hygiene practices",
+      "Distribution of dental care kits",
+      "Opportunity to consult with dental professionals"
+    ]
+  },
+  {
+    "campName": "Cardiovascular Health Camp",
+    "image": "https://i.ibb.co/0j9cyLW/cardiac.jpg",
+    "campFees": 30,
+    "scheduledDate": "2023-08-08",
+    "scheduledTime": "8:00 AM - 1:00 PM",
+    "venueLocation": "Heart Health Center",
+    "specializedServices": ["Cardiac Screening", "Nutrition Counseling", "Fitness Assessments"],
+    "healthcareProfessionals": [
+      "Dr. Richard Anderson, Cardiologist",
+      "Ms. Laura Turner, Nutritionist",
+      "Mr. William Davis, Fitness Trainer"
+    ],
+    "targetAudience": "Adults at Risk of Heart Disease",
+    "participantCount": 0,
+    "description": "The Cardiovascular Health Camp is dedicated to preventing heart disease. Attendees can undergo cardiac screenings, receive nutrition counseling, and participate in fitness assessments. Our healthcare professionals focus on promoting heart-healthy lifestyles.",
+    "benefits": [
+      "Cardiac screenings for early detection",
+      "Nutrition counseling for heart-healthy diets",
+      "Fitness assessments and tailored exercise plans",
+      "Education on heart disease prevention"
+    ]
+  },
+  {
+    "campName": "Diabetes Awareness and check-up Camp",
+    "image": "https://i.ibb.co/8MCfgHS/p8.jpg",
+    "campFees": 22,
+    "scheduledDate": "2023-09-10",
+    "scheduledTime": "10:30 AM - 3:30 PM",
+    "venueLocation": "Diabetes Care Center",
+    "specializedServices": ["Blood Glucose Testing", "Nutritional Guidance", "Medication Consultations"],
+    "healthcareProfessionals": [
+      "Dr. Elizabeth White, Endocrinologist",
+      "Ms. Jessica Taylor, Dietitian",
+      "Mr. John Miller, Diabetes Educator"
+    ],
+    "targetAudience": "Individuals with Diabetes",
+    "participantCount": 0,
+    "description": "The Diabetes Awareness and Management Camp provides support to individuals with diabetes. Services include blood glucose testing, nutritional guidance, and medication consultations. Our healthcare professionals aim to empower individuals to manage diabetes effectively.",
+    "benefits": [
+      "Regular blood glucose testing",
+      "Personalized nutritional guidance",
+      "Consultations with diabetes care experts",
+      "Education on diabetes management"
+    ]
+  },
+  {
+    "campName": "Mental Health and Well-being Camp",
+    "image": "https://i.ibb.co/dDYzJ9z/mental.jpg",
+    "campFees": 28,
+    "scheduledDate": "2023-10-15",
+    "scheduledTime": "11:00 AM - 4:00 PM",
+    "venueLocation": "Mental Health Center",
+    "specializedServices": ["Counseling Sessions", "Mindfulness Workshops", "Stress Management"],
+    "healthcareProfessionals": [
+      "Dr. Samantha Adams, Psychiatrist",
+      "Dr. Emily White, Psychologist",
+      "Mr. Robert Johnson, Counselor"
+    ],
+    "targetAudience": "Individuals Seeking Mental Health Support",
+    "participantCount": 0,
+    "description": "The Mental Health and Well-being Camp focuses on mental health awareness and support. Attendees can participate in counseling sessions, mindfulness workshops, and stress management activities. Our mental health professionals aim to promote overall well-being.",
+    "benefits": [
+      "Access to counseling and support services",
+      "Participation in mindfulness workshops",
+      "Techniques for stress management",
+      "Community engagement for mental health awareness"
+    ]
+  },
+  {
+    "campName": "Women's Health and Wellness Camp",
+    "image": "https://i.ibb.co/9NH7CLB/women5.jpg",
+    "campFees": 25,
+    "scheduledDate": "2023-11-20",
+    "scheduledTime": "10:00 AM - 3:00 PM",
+    "venueLocation": "Women's Health Center",
+    "specializedServices": ["Women's Health Screenings", "Reproductive Health Education", "Fitness Workshops"],
+    "healthcareProfessionals": [
+      "Dr. Laura Anderson, Gynecologist",
+      "Nurse Emma, Women's Health Nurse",
+      "Mr. James Turner, Fitness Instructor"
+    ],
+    "targetAudience": "Women of All Ages",
+    "participantCount": 0,
+    "description": "The Women's Health and Wellness Camp offers a range of services to support women's health. Attendees can undergo women's health screenings, receive reproductive health education, and participate in fitness workshops. Our healthcare professionals focus on empowering women to prioritize their well-being.",
+    "benefits": [
+      "Comprehensive women's health screenings",
+      "Education on reproductive health",
+      "Participation in fitness workshops",
+      "Empowerment for women's overall well-being"
+    ]
+  },
+  {
+    "campName": "Cancer Awareness and Prevention Camp",
+    "image": "https://i.ibb.co/VTXs6dd/cancer.jpg",
+    "campFees": 35,
+    "scheduledDate": "2023-12-05",
+    "scheduledTime": "9:30 AM - 3:30 PM",
+    "venueLocation": "Cancer Care Center",
+    "specializedServices": ["Cancer Screenings", "Educational Seminars", "Supportive Resources"],
+    "healthcareProfessionals": [
+      "Dr. Michael Turner, Oncologist",
+      "Nurse Sarah, Cancer Nurse",
+      "Ms. Rachel Davis, Supportive Care Specialist"
+    ],
+    "targetAudience": "Individuals Interested in Cancer Prevention",
+    "participantCount": 0,
+    "description": "The Cancer Awareness and Prevention Camp focuses on early detection and prevention of cancer. Attendees can undergo cancer screenings, attend educational seminars, and access supportive resources. Our healthcare professionals aim to raise awareness and provide support to those interested in cancer prevention.",
+    "benefits": [
+      "Comprehensive cancer screenings",
+      "Educational seminars on cancer prevention",
+      "Access to supportive resources and counseling",
+      "Community engagement for cancer awareness"
+    ]
+  },
+  {
+    "campName": "Respiratory Health Camp",
+    "image": "https://i.ibb.co/9H7sXpb/women4.jpg",
+    "campFees": 18,
+    "scheduledDate": "2024-01-15",
+    "scheduledTime": "8:00 AM - 1:00 PM",
+    "venueLocation": "Respiratory Care Center",
+    "specializedServices": ["Lung Function Tests", "Respiratory Health Education", "Smoking Cessation Support"],
+    "healthcareProfessionals": [
+      "Dr. Robert Turner, Respiratory Therapist",
+      "Dr. Emma Johnson, Pulmonologist",
+      "Ms. Linda White, Smoking Cessation Counselor"
+    ],
+    "targetAudience": "Individuals with Respiratory Concerns",
+    "participantCount": 0,
+    "description": "The Respiratory Health Camp is dedicated to addressing the respiratory concerns of individuals. Join us for lung function tests, respiratory health education, and personalized support for smoking cessation. Our experienced healthcare professionals are committed to improving respiratory well-being and providing valuable guidance.",
+    "benefits": [
+      "Comprehensive lung function tests for participants",
+      "Educational sessions on respiratory health",
+      "Individualized support for smoking cessation",
+      "Access to respiratory therapists and pulmonologists",
+      "Opportunity to connect with others facing similar concerns"
+    ]
+  },
     {
             "campName": "Women's Wellness Workshop",
             "image": "https://i.ibb.co/SB9Lcs5/women.jpg",
@@ -219,9 +258,13 @@
             "scheduledTime": "10:00 AM - 3:00 PM",
             "venueLocation": "Women's Health Center",
             "specializedServices": ["Women's Health Screenings", "Nutritional Counseling", "Fitness Workshops"],
-            "healthcareProfessionals": ["Gynecologist", "Nutritionist", "Fitness Instructor"],
+            "healthcareProfessionals": [
+              "Dr. Laura Anderson, Gynecologist",
+              "Nurse Emma, Women's Health Nurse",
+              "Mr. James Turner, Fitness Instructor"
+            ],
             "targetAudience": "Women of All Ages",
-            "participantCount": 85,
+            "participantCount": 0,
             "description": "The Women's Wellness Workshop is a day dedicated to promoting women's health and well-being. Join us for women's health screenings, nutritional counseling, and engaging fitness workshops. Our team of healthcare professionals is here to support women of all ages on their wellness journey.",
             "benefits": [
               "Comprehensive women's health screenings",
@@ -239,9 +282,13 @@
             "scheduledTime": "9:00 AM - 5:00 PM",
             "venueLocation": "Cardiology Center",
             "specializedServices": ["Cardiac Screenings", "Heart Health Seminars", "Fitness Assessments"],
-            "healthcareProfessionals": ["Cardiologist", "Cardiac Nurse", "Fitness Specialist"],
+            "healthcareProfessionals": [
+              "Dr. Richard Anderson, Cardiologist",
+              "Ms. Laura Turner, Nutritionist",
+              "Mr. William Davis, Fitness Trainer"
+            ],
             "targetAudience": "Individuals with Cardiac Concerns",
-            "participantCount": 75,
+            "participantCount": 0,
             "description": "The Cardiac Care Symposium is designed for individuals with cardiac concerns. Join us for cardiac screenings, heart health seminars, and personalized fitness assessments. Our team of healthcare professionals is dedicated to providing valuable insights and support for cardiac well-being.",
             "benefits": [
               "Comprehensive cardiac screenings for participants",

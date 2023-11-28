@@ -83,7 +83,7 @@ const RegisterForm = ({campData,onRegistration}) => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-       <div className="flex flex-row gap-5 w-full">
+       <div className="flex flex-col md:flex-row gap-5 w-full">
        <div className="form-control flex-1">
           <label className="label">
             <span className="label-text text-lg font-medium">Name</span>
@@ -116,7 +116,7 @@ const RegisterForm = ({campData,onRegistration}) => {
         </div>
        </div>
 
-        <div className="flex flex-row gap-5 w-full">
+        <div className="flex flex-col md:flex-row gap-5 w-full">
         <div className="form-control flex-1">
           <label className="label">
             <span className="label-text text-lg font-medium">Age</span>
@@ -143,7 +143,7 @@ const RegisterForm = ({campData,onRegistration}) => {
         </div>
         </div>
 
-        <div className="flex flex-row gap-5 w-full">
+        <div className="flex flex-col md:flex-row gap-5 w-full">
         <div className="form-control flex-1">
         <label className="label">
             <span className="label-text text-lg font-medium">Gender</span>

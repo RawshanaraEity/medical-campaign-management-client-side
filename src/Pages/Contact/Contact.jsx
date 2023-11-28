@@ -10,16 +10,16 @@ const Contact = () => {
         <title>MediCamp/Contact</title>
       </Helmet>
 
-      <h2 className="text-4xl md:text-5xl text-center text-black font-bold  p-14">
+      {/* <h2 className="text-4xl md:text-5xl text-center text-black font-bold  p-14">
         Contact Us
-      </h2>
+      </h2> */}
       
-      <div>
-        <h2 className="text-5xl text-center font-semibold mt-10">
+      <div className="px-5 md:px-0">
+        <h2 className="text-3xl lg:text-5xl text-center font-semibold mt-10">
           Drop us a message for any query
         </h2>
-        <div className="card rounded-none w-8/12 mx-auto my-10 bg-base-100 shadow-xl">
-          <div className="card-body py-5 flex-row gap-5 w-full">
+        <div className="card rounded-none  md:w-8/12 mx-auto my-10 bg-base-100 shadow-xl">
+          <div className="card-body py-5 flex-col md:flex-row gap-5 w-full">
             <div className="form-control flex-1">
               <label className="label">
                 <span className="label-text text-lg text-gray-600 font-medium">
@@ -49,7 +49,7 @@ const Contact = () => {
               />
             </div>
           </div>
-          <div className="card-body py-2 flex-row gap-5 w-full">
+          <div className="card-body py-2 flex-col md:flex-row  gap-5 w-full">
             <div className="form-control flex-1">
               <label className="label">
                 <span className="label-text text-lg text-gray-600 font-medium">

@@ -7,6 +7,8 @@ import Register from "./Pages/Register/Register";
 import Contact from "./Pages/Contact/Contact";
 import AvailableCamps from "./Pages/AvailableCamps/AvailableCamps";
 import CampDetails from "./components/CampDetails";
+import Dashboard from "./Layout/Dashboard";
+
 
 
 
@@ -39,6 +41,11 @@ export const router = createBrowserRouter([
         {
             path: '/register',
             element: <Register></Register>
+        },
+        {
+            path: '/dashboard',
+            element: <Dashboard></Dashboard>
+            
         }
       ]
       

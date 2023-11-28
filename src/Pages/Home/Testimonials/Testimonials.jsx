@@ -46,8 +46,8 @@ const Testimonials = () => {
             <div className="mx-24 my-16 flex flex-col  text-center items-center ">
               <Rating style={{ maxWidth: 180 }} itemStyles={customStyles} value={review.rating} readOnly />
               <p className="py-5 font-semibold text-gray-500">{review?.date}</p>
-              <h3 className="text-3xl ">{review?.campName}</h3>
-              <p className="py-5  text-lg">{review?.feedback}</p>
+              <h3 className="text-xl md:text-3xl font-semibold text-lime-600">{review?.campName}</h3>
+              <p className="py-5  md:text-lg">{review?.feedback}</p>
             </div>
           </SwiperSlide>
         ))}
