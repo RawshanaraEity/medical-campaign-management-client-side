@@ -5,10 +5,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 
 
-
-const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTIONG_KEY;
-const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
-
 const RegisterForm = ({campData,onRegistration}) => {
     const {campFees, _id} = campData
     
