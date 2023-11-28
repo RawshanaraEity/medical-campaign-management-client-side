@@ -9,6 +9,7 @@ const CampDetails = () => {
   const axiosPublic = useAxiosPublic();
   const { id } = useParams();
   const [campData, setCampData] = useState([]);
+//   const [participant, setParticipant] = useState([campData?.participantCount]);
 
   useEffect(() => {
     axiosPublic
@@ -56,7 +57,7 @@ const CampDetails = () => {
             ))}
           </ul>
           <p className="text-2xl underline font-bold">
-            Target Audience : {campData.targetAudience}{" "}
+            Target Audience : {campData.targetAudience}
           </p>
 
           <div>
@@ -74,7 +75,7 @@ const CampDetails = () => {
             </div>
           </div>
           <p className="font-bold text-gray-500">
-            Total Participant: {campData?.participantCount}{" "}
+            Total Participant: {campData?.participantCount}
           </p>
           <p className="font-bold text-red-600">
             Camp Fees: ${campData?.campFees}{" "}

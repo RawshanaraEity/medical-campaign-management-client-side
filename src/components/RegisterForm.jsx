@@ -54,7 +54,7 @@ const RegisterForm = ({campData}) => {
               showConfirmButton: false,
               timer: 1500
             });
-           
+        //    setParticipant((prevCount) => prevCount + 1)
           }
         })
       }
