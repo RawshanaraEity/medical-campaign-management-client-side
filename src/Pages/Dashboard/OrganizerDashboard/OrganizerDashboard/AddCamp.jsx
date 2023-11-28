@@ -17,8 +17,8 @@ const AddCamp = () => {
 
   return (
    <div>
-     <form onSubmit={handleSubmit(onSubmit)} className="your-form-styles">
-     <div className=" w-11/12 mx-auto">
+     <form onSubmit={handleSubmit(onSubmit)}>
+     <div className=" w-11/12 mx-auto bg-lime-50 p-10 shadow-lg">
         <div className="flex gap-5">
              {/* Camp Name */}
       <div className="form-control flex-1">
@@ -208,8 +208,8 @@ const AddCamp = () => {
       </div>
 
       {/* Submit Button */}
-      <div className="form-control  mt-6">
-          <input  className="btn bg-lime-500 text-white " type="submit" value="Submit" />
+      <div className="form-control w-28 mx-auto mt-6">
+          <input  className="btn  bg-lime-500 text-white " type="submit" value="Submit" />
         </div>
      </div>
     </form>
