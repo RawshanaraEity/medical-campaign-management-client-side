@@ -1,8 +1,14 @@
 
-
 import { useForm } from "react-hook-form";
+import useAxiosPublic from "../../../../Hooks/useAxiosPublic";
+import Swal from "sweetalert2";
+
+
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTIONG_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
 const AddCamp = () => {
+    const axiosPublic = useAxiosPublic()
 
   const {
      register,
@@ -11,9 +17,51 @@ const AddCamp = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) =>{
+  const onSubmit = async (data) =>{
     console.log(data);
-}
+
+    const imageFile = { image: data.image[0] }
+    const res = await axiosPublic.post(image_hosting_api, imageFile, {
+        headers: {
+            'content-type': "multipart/form-data"
+        }
+    } )
+    if(res.data.success){
+        // now send the menu item data to the seerver with the image url
+        const campItem = {
+            campName: data.campName,
+            category: data.category,
+            campFees: parseFloat(data.campFees),
+            scheduledDate: data.scheduledDate,
+            scheduledTime: data.scheduledTime,
+            venueLocation: data.venueLocation,
+            specializedServices: data.specializedServices.split(',').map(item => item.trim()),
+            healthcareProfessionals: data.healthcareProfessionals.split(',').map(item => item.trim()),
+            benefits: data.benefits.split(',').map(item => item.trim()),
+            targetAudience: data.targetAudience,
+            participantCount: data.participantCount,
+            description: data.description,
+            image: res.data.data.display_url
+        }
+        // 
+        const campRes = await axiosPublic.post('/camps', campItem);
+        console.log(campRes.data)
+        if(campRes.data.insertedId){
+            // show success popup
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: `${data.campName} is added to the camps`,
+                showConfirmButton: false,
+                timer: 1500
+              });
+              reset()
+        }
+    }
+    console.log(res.data);
+  };
+
+
 
   return (
    <div>
@@ -39,13 +87,13 @@ const AddCamp = () => {
       <div className="form-control flex-1">
       <label className="label">
            <span className="label-text text-lg font-medium">
-           Image UR
+           Image URL
            </span>
             </label>
             <input
-          type="url"
+          type="file"
           {...register("image", { required: true })}
-          className="input input-bordered"
+        
         />
         {errors.image && <span className="text-red-600">This field is required</span>}
       </div>
@@ -123,7 +171,7 @@ const AddCamp = () => {
            Specialized Services
            </span>
             </label>
-        <input
+        <textarea
           type="text"
           {...register("specializedServices", { required: true })}
           className="input input-bordered"
@@ -138,7 +186,7 @@ const AddCamp = () => {
            Healthcare Professionals
            </span>
             </label>
-        <input
+        <textarea
           type="text"
           {...register("healthcareProfessionals", { required: true })}
           className="input input-bordered"
@@ -215,6 +263,6 @@ const AddCamp = () => {
     </form>
    </div>
   );
-};
+  }
 
 export default AddCamp;

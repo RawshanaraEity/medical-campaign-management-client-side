@@ -58,9 +58,9 @@ const fetchCampData = useCallback(async () => {
           <p className="text-lg">{campData?.description}</p>
           <h2 className="text-2xl font-bold   underline">Benefits</h2>
           <ul className="list-disc ml-4 text-xl">
-            {campData?.benefits?.map((item, index) => (
+            {  campData?.benefits?.map((item, index) => (
               <li key={index}> {item}</li>
-            ))}
+            )) }
           </ul>
         </div>
         <div className="col-span-1 space-y-5">
@@ -68,15 +68,15 @@ const fetchCampData = useCallback(async () => {
             Specialized Services
           </h2>
           <ul className="list-disc ml-4 text-xl">
-            {campData?.specializedServices?.map((item, index) => (
+            {  campData?.specializedServices?.map((item, index) => (
               <li key={index}> {item}</li>
-            ))}
+            )) }
           </ul>
           <h2 className="text-2xl font-bold   underline">Our Professionals</h2>
           <ul className="list-disc ml-4 text-xl">
-            {campData?.healthcareProfessionals?.map((item, index) => (
+            {  campData?.healthcareProfessionals?.map((item, index) => (
               <li key={index}> {item}</li>
-            ))}
+            ))  }
           </ul>
           <p className="text-2xl underline font-bold">
             Target Audience : {campData.targetAudience}
