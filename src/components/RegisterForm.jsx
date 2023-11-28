@@ -4,13 +4,15 @@ import useAxiosPublic from "../Hooks/useAxiosPublic";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 
-const RegisterForm = ({campData}) => {
+
+const RegisterForm = ({campData,onRegistration}) => {
     const {campFees, _id} = campData
     
     const {user} = useAuth()
     const navigate = useNavigate()
     const location = useLocation()
     const axiosPublic = useAxiosPublic()
+ 
     
 
     const {
@@ -25,9 +27,8 @@ const RegisterForm = ({campData}) => {
     const onSubmit = (data) =>{
         console.log(data);
       console.log(campData, user.email)
-      if(user && user.email){
-        // console.log(user.email, item)
-        //  send register item to the database
+      if(user && user.email ){
+      
         const registeredItem = {
              email: user.email,
              role: user.role,
@@ -54,14 +55,14 @@ const RegisterForm = ({campData}) => {
               showConfirmButton: false,
               timer: 1500
             });
-        //    setParticipant((prevCount) => prevCount + 1)
+            onRegistration()
           }
         })
       }
       else{
         Swal.fire({
           title: "You are not logged in?",
-          text: "Please login to add to the cart!",
+          text: "Please login for Camp Register",
           icon: "warning",
           showCancelButton: true,
           confirmButtonColor: "#3085d6",

@@ -1,26 +1,48 @@
 import { useParams } from "react-router-dom";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaCalendar, FaClock } from "react-icons/fa";
 import RegisterForm from "./RegisterForm";
+
 
 const CampDetails = () => {
   const axiosPublic = useAxiosPublic();
   const { id } = useParams();
   const [campData, setCampData] = useState([]);
-//   const [participant, setParticipant] = useState([campData?.participantCount]);
+ 
+
+
+//   useEffect(() => {
+//     axiosPublic
+//       .get(`/camps/${id}`)
+//       .then((response) => {
+//         setCampData(response.data);
+        
+//       })
+//       .catch((error) => {
+//         console.error("Error fetching camp data:", error);
+//       });
+//   }, [axiosPublic, id]);
+
+
+const fetchCampData = useCallback(async () => {
+    try {
+      const response = await axiosPublic.get(`/camps/${id}`);
+      setCampData(response.data);
+    } catch (error) {
+      console.error("error fetching", error)
+    }
+  }, [axiosPublic, id]);
 
   useEffect(() => {
-    axiosPublic
-      .get(`/camps/${id}`)
-      .then((response) => {
-        setCampData(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching camp data:", error);
-      });
-  }, [axiosPublic, id]);
+    fetchCampData();
+  }, [fetchCampData]);
+
+  const handleRegistration = () => {
+    fetchCampData();
+  };
+
 
   //   console.log(campData);
   return (
@@ -78,7 +100,7 @@ const CampDetails = () => {
             Total Participant: {campData?.participantCount}
           </p>
           <p className="font-bold text-red-600">
-            Camp Fees: ${campData?.campFees}{" "}
+            Camp Fees: ${campData?.campFees}
           </p>
           {/* You can open the modal using document.getElementById('ID').showModal() method */}
           <button
@@ -91,13 +113,13 @@ const CampDetails = () => {
             <div className="modal-box w-11/12 max-w-2xl p-10">
               <form method="dialog">
                 {/* if there is a button in form, it will close the modal */}
-                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                <button className="btn btn-lg btn-circle btn-ghost absolute right-2 top-2">
                   ✕
                 </button>
               </form>
 
               <h3 className="font-medium text-2xl mb-5 text-center">Please Fillup This Form For Camp Registration</h3>
-           <RegisterForm campData={campData}></RegisterForm>
+           <RegisterForm campData={campData} onRegistration={handleRegistration}></RegisterForm>
 
 
             </div>

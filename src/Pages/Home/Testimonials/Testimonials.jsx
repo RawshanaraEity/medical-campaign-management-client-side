@@ -16,8 +16,8 @@ const Star = (
 
 const customStyles = {
     itemShapes: Star,
-    activeFillColor: '#22C55E',
-    inactiveFillColor: '#BBF7D0',
+    activeFillColor: '#84cc16',
+    inactiveFillColor: '#bef264',
   };
 
 const Testimonials = () => {
