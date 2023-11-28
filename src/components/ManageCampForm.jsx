@@ -1,19 +1,82 @@
 import { useForm } from "react-hook-form";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
+import Swal from "sweetalert2";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
-const ManageCampForm = ({camp}) => {
-    
-    console.log(camp);
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTIONG_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
+
+const ManageCampForm = () => {
+    const {id} = useParams()
+    console.log(id);
+    const axiosPublic = useAxiosPublic()
+    const [camp, setCamp] = useState([]);
+    const navigate = useNavigate()
+
+     useEffect(() => {
+    axiosPublic
+      .get(`/camps/${id}`)
+      .then((response) => {
+        setCamp(response.data);
+        
+      })
+      .catch((error) => {
+        console.error("Error fetching camp data:", error);
+      });
+  }, [axiosPublic, id]);
+
     const {
-        register,
-       handleSubmit,
-       reset,
-       formState: { errors },
-     } = useForm();
-   
-     const onSubmit = (data) =>{
-       console.log(data);
-   }
+       register,
+      handleSubmit,
+      reset,
+      formState: { errors },
+    } = useForm();
+  
+    const onSubmit = async (data) =>{
+      console.log(data);
+  
+      const imageFile = { image: data.image[0] }
+      const res = await axiosPublic.post(image_hosting_api, imageFile, {
+          headers: {
+              'content-type': "multipart/form-data"
+          }
+      } )
+      if(res.data.success){
+          
+          const campItem = {
+              campName: data.campName,
+              campFees: parseFloat(data.campFees),
+              scheduledDate: data.scheduledDate,
+              scheduledTime: data.scheduledTime,
+              venueLocation: data.venueLocation,
+              specializedServices: data.specializedServices.split(',').map(item => item.trim()),
+              healthcareProfessionals: data.healthcareProfessionals.split(',').map(item => item.trim()),
+              benefits: data.benefits.split(',').map(item => item.trim()),
+              targetAudience: data.targetAudience,
+              participantCount: data.participantCount,
+              description: data.description,
+              image: res.data.data.display_url
+          }
+          // 
+          const campRes = await axiosPublic.patch(`/camps/${camp._id}`, campItem);
+          console.log(campRes.data)
+          if(campRes.data.modifiedCount){
+              
+              Swal.fire({
+                  position: "top-end",
+                  icon: "success",
+                  title: `${data.campName} is updated successfully`,
+                  showConfirmButton: false,
+                  timer: 1500
+                });
+                reset()
+                navigate('/dashboard/manage-camps')
+          }
+      }
+      console.log(res.data);
+    };
 
     return (
         <div>
@@ -45,10 +108,9 @@ const ManageCampForm = ({camp}) => {
               </span>
                </label>
                <input
-             type="url"
+             type="file"
              {...register("image", { required: true })}
-             defaultValue={camp.image}
-             className="input input-bordered"
+             className="file file-input-bordered"
            />
            {errors.image && <span className="text-red-600">This field is required</span>}
          </div>

@@ -13,6 +13,7 @@ import AddCamp from "../Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/Ad
 import ManageCamp from "../Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/ManageCamp";
 import Users from "../Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/Users";
 import RegisteredCampManage from "../Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/RegisteredCampManage";
+import ManageCampForm from "../components/ManageCampForm";
 
 
 
@@ -67,6 +68,10 @@ export const router = createBrowserRouter([
                     path: '/dashboard/manage-camps',
                     element: <ManageCamp></ManageCamp>
 
+                },
+                {
+                    path: '/dashboard/update-camp/:id',
+                    element: <ManageCampForm></ManageCampForm>
                 },
                 {
                     path: '/dashboard/manage-registered-camps',
