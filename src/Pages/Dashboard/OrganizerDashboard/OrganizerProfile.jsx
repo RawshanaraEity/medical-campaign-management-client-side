@@ -5,7 +5,7 @@ const OrganizerProfile = () => {
   console.log(user);
   return (
     <div>
-      <div className="card w-96 items-center mx-auto bg-base-100 shadow-xl">
+      <div className="card md:w-96 items-center mx-auto bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
          <div className="">
                <img className="w-40 h-40 rounded-full border-4 border-lime-500" src={user?.photoURL ? user?.photoURL : `https://i.ibb.co/8X8stTp/user.webp`} alt={user?.displayName} />

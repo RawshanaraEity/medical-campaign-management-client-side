@@ -16,7 +16,7 @@ import { NavLink, Outlet } from "react-router-dom";
 const Dashboard = () => {
   return (
     <div className="flex flex-col md:flex-row ">
-      <div className="w-full md:w-64  min-h-screen bg-lime-500 text-white ">
+      <div className="w-full md:w-64  min-h-screen bg-lime-700 text-white ">
         <ul className="menu p-4 text-base">
 
             {/* organizer dashboard */}
@@ -119,7 +119,7 @@ const Dashboard = () => {
         </ul>
       </div>
       {/* dashboard sidebar */}
-      <div className="flex-1 p-8">
+      <div className="flex-1 p-5 lg:p-8">
         <Outlet></Outlet>
       </div>
     </div>

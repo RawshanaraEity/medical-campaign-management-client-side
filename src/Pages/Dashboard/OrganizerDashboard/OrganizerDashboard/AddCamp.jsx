@@ -18,8 +18,8 @@ const AddCamp = () => {
   return (
    <div>
      <form onSubmit={handleSubmit(onSubmit)}>
-     <div className=" w-11/12 mx-auto bg-lime-50 p-10 shadow-lg">
-        <div className="flex gap-5">
+     <div className="w-full lg:w-11/12 mx-auto bg-lime-50 p-5 md:p-3 lg:p-10 shadow-lg">
+        <div className="flex flex-col md:flex-row gap-5">
              {/* Camp Name */}
       <div className="form-control flex-1">
         <label className="label">
@@ -51,7 +51,7 @@ const AddCamp = () => {
       </div>
         </div>
 
-     <div className="flex gap-5">
+     <div className="flex flex-col md:flex-row gap-5">
          {/* Camp Fees */}
       <div className="form-control flex-1">
       <label className="label">
@@ -83,7 +83,7 @@ const AddCamp = () => {
       </div>
      </div>
 
-     <div className="flex gap-5">
+     <div className="flex flex-col md:flex-row gap-5">
          {/* Scheduled Time */}
       <div className="form-control flex-1">
       <label className="label">
@@ -115,7 +115,7 @@ const AddCamp = () => {
       </div>
      </div>
 
-     <div className="flex gap-5">
+     <div className="flex flex-col md:flex-row gap-5">
              {/* Specialized Services */}
       <div className="form-control flex-1">
       <label className="label">
@@ -147,7 +147,7 @@ const AddCamp = () => {
       </div>
      </div>
 
-     <div className="flex gap-5">
+     <div className="flex flex-col md:flex-row gap-5">
      {/* Target Audience */}
      <div className="form-control flex-1">
      <label className="label">
@@ -180,7 +180,7 @@ const AddCamp = () => {
       </div>
      </div>
 
-      <div className="flex gap-5">
+      <div className="flex flex-col md:flex-row gap-5">
         {/* Description */}
       <div className="form-control flex-1">
       <label className="label">
