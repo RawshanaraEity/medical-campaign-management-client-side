@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
-import useMediCamps from "../../../../Hooks/useMediCamps";
 
-const ManageCampForm = () => {
-    const [camps, loading, refetch] = useMediCamps()
 
+const ManageCampForm = ({camp}) => {
+    
+    console.log(camp);
     const {
         register,
        handleSubmit,
@@ -19,7 +19,7 @@ const ManageCampForm = () => {
         <div>
             
         <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="w-full lg:w-11/12 mx-auto bg-lime-50 p-5 md:p-3 lg:p-10 shadow-lg">
+        <div className="w-full  mx-auto bg-lime-50 p-5 md:p-3 lg:p-8 shadow-lg">
            <div className="flex flex-col md:flex-row gap-5">
                 {/* Camp Name */}
          <div className="form-control flex-1">
@@ -31,6 +31,7 @@ const ManageCampForm = () => {
            <input
              type="text"
              {...register("campName", { required: true })}
+             defaultValue={camp.campName}
              className="input input-bordered"
            />
            {errors.campName && <span className="text-red-600">This field is required</span>}
@@ -46,6 +47,7 @@ const ManageCampForm = () => {
                <input
              type="url"
              {...register("image", { required: true })}
+             defaultValue={camp.image}
              className="input input-bordered"
            />
            {errors.image && <span className="text-red-600">This field is required</span>}
@@ -63,6 +65,7 @@ const ManageCampForm = () => {
            <input
              type="number"
              {...register("campFees", { required: true })}
+             defaultValue={camp.campFees}
              className="input input-bordered"
            />
            {errors.campFees && <span className="text-red-600">This field is required</span>}
@@ -78,6 +81,7 @@ const ManageCampForm = () => {
            <input
              type="date"
              {...register("scheduledDate", { required: true })}
+             defaultValue={camp.scheduledDate}
              className="input input-bordered"
            />
            {errors.scheduledDate && <span className="text-red-600">This field is required</span>}
@@ -95,6 +99,7 @@ const ManageCampForm = () => {
            <input
              type="text"
              {...register("scheduledTime", { required: true })}
+             defaultValue={camp.scheduledTime}
              className="input input-bordered"
            />
            {errors.scheduledTime && <span className="text-red-600">This field is required</span>}
@@ -110,6 +115,7 @@ const ManageCampForm = () => {
            <input
              type="text"
              {...register("venueLocation", { required: true })}
+             defaultValue={camp.venueLocation}
              className="input input-bordered"
            />
            {errors.venueLocation && <span className="text-red-600">This field is required</span>}
@@ -124,9 +130,10 @@ const ManageCampForm = () => {
               Specialized Services
               </span>
                </label>
-           <input
+           <textarea
              type="text"
              {...register("specializedServices", { required: true })}
+             defaultValue={camp.specializedServices}
              className="input input-bordered"
            />
            {errors.specializedServices && <span className="text-red-600">This field is required</span>}
@@ -139,9 +146,10 @@ const ManageCampForm = () => {
               Healthcare Professionals
               </span>
                </label>
-           <input
+           <textarea
              type="text"
              {...register("healthcareProfessionals", { required: true })}
+             defaultValue={camp.healthcareProfessionals}
              className="input input-bordered"
            />
            {errors.healthcareProfessionals && <span className="text-red-600">This field is required</span>}
@@ -159,6 +167,7 @@ const ManageCampForm = () => {
            <input
              type="text"
              {...register("targetAudience", { required: true })}
+             defaultValue={camp.targetAudience}
              className="input input-bordered"
            />
            {errors.targetAudience && <span className="text-red-600">This field is required</span>}
@@ -191,6 +200,7 @@ const ManageCampForm = () => {
                </label>
            <textarea
              {...register("description", { required: true })}
+             defaultValue={camp.description}
              className="input input-bordered"
            />
            {errors.description && <span className="text-red-600">This field is required</span>}
@@ -203,7 +213,10 @@ const ManageCampForm = () => {
               Benefits
               </span>
                </label>
-           <textarea {...register("benefits", { required: true })} className="input input-bordered" />
+           <textarea
+            {...register("benefits", { required: true })}
+            defaultValue={camp.benefits}
+             className="input input-bordered" />
            {errors.benefits && <span className="text-red-600">This field is required</span>}
          </div>
          </div>
