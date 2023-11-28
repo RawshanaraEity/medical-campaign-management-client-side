@@ -91,7 +91,7 @@ const Dashboard = () => {
           {/* professionals dashboard */}
           <li>
             <NavLink to="/dashboard/professional-profile">
-              <FaHome></FaHome>
+              <FaUser></FaUser>
               Professionals Profile
             </NavLink>
           </li>

@@ -8,6 +8,12 @@ import Contact from "./Pages/Contact/Contact";
 import AvailableCamps from "./Pages/AvailableCamps/AvailableCamps";
 import CampDetails from "./components/CampDetails";
 import Dashboard from "./Layout/Dashboard";
+import OrganizerProfile from "./Pages/Dashboard/OrganizerDashboard/OrganizerProfile";
+import AddCamp from "./Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/AddCamp";
+import ManageCamp from "./Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/ManageCamp";
+import Users from "./Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/Users";
+import RegisteredCampManage from "./Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/RegisteredCampManage";
+
 
 
 
@@ -44,7 +50,36 @@ export const router = createBrowserRouter([
         },
         {
             path: '/dashboard',
-            element: <Dashboard></Dashboard>
+            element: <Dashboard></Dashboard>,
+            children: [
+                // organizer routes
+                {
+                    path: '/dashboard/organizer-profile',
+                    element: <OrganizerProfile></OrganizerProfile>
+
+                },
+                {
+                    path: '/dashboard/add-a-camp',
+                    element: <AddCamp></AddCamp>
+
+                },
+                {
+                    path: '/dashboard/manage-camps',
+                    element: <ManageCamp></ManageCamp>
+
+                },
+                {
+                    path: '/dashboard/manage-registered-camps',
+                    element: <RegisteredCampManage></RegisteredCampManage>
+
+                },
+                {
+                    path: '/dashboard/users',
+                    element: <Users></Users>
+
+                },
+               
+            ]
             
         }
       ]
