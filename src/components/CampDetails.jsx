@@ -4,26 +4,15 @@ import { useCallback, useEffect, useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaCalendar, FaClock } from "react-icons/fa";
 import RegisterForm from "./RegisterForm";
+import useParticipant from "../Hooks/useParticipant";
 
 
 const CampDetails = () => {
   const axiosPublic = useAxiosPublic();
   const { id } = useParams();
   const [campData, setCampData] = useState([]);
+  const [isParticipant] = useParticipant()
  
-
-
-//   useEffect(() => {
-//     axiosPublic
-//       .get(`/camps/${id}`)
-//       .then((response) => {
-//         setCampData(response.data);
-        
-//       })
-//       .catch((error) => {
-//         console.error("Error fetching camp data:", error);
-//       });
-//   }, [axiosPublic, id]);
 
 
 const fetchCampData = useCallback(async () => {
@@ -103,12 +92,16 @@ const fetchCampData = useCallback(async () => {
             Camp Fees: ${campData?.campFees}
           </p>
           {/* You can open the modal using document.getElementById('ID').showModal() method */}
-          <button
+          {
+            isParticipant && 
+              <button
             className="btn rounded-none bg-lime-500 text-xl text-white  px-7"
             onClick={() => document.getElementById("my_modal_3").showModal()}
           >
             Join Camp
           </button>
+            
+          }
           <dialog id="my_modal_3" className="modal">
             <div className="modal-box w-11/12 max-w-2xl p-10">
               <form method="dialog">

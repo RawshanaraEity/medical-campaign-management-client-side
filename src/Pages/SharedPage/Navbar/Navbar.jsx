@@ -21,21 +21,22 @@ const NavBar = () => {
           Home
         </NavLink>
       </li>
-      <li className="text-white text-lg font-medium mr-2">
-        
-        <NavLink
-          to="/availableCamps"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-lime-400" : ""
-          }
-        >
-         Available Camps
-        </NavLink>
-      </li>
-
 
      {
-      user &&  <li className="text-white text-lg font-medium mr-2">
+      user && 
+       <> 
+       <li className="text-white text-lg font-medium mr-2">
+      <NavLink
+        to="/availableCamps"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "text-lime-400" : ""
+        }
+      >
+       Available Camps
+      </NavLink>
+      </li>  
+
+       <li className="text-white text-lg font-medium mr-2">
       <NavLink
         to="/dashboard"
         className={({ isActive, isPending }) =>
@@ -44,7 +45,8 @@ const NavBar = () => {
       >
         Dashboard
       </NavLink>
-    </li>
+      </li>
+      </>
      }
 
       <li className="text-white text-lg font-medium mr-2">

@@ -17,10 +17,12 @@ import useParticipant from "../Hooks/useParticipant";
 import useProfessional from "../Hooks/useProfessional";
 
 const Dashboard = () => {
-    const [isOrganizer, isOrganizerLoading] = useOrganizer([])
+    const [isOrganizer] = useOrganizer([])
     const [isParticipant] = useParticipant()
     const [isProfessional] = useProfessional()
-    console.log('is organizer',isOrganizer, isParticipant, isProfessional);
+    // console.log('is organizer',isOrganizer, isParticipant, isProfessional);
+
+
   return (
     <div className="flex flex-col md:flex-row ">
       <div className="w-full md:w-64  min-h-screen bg-lime-700 text-white ">
@@ -54,14 +56,8 @@ const Dashboard = () => {
               Manage Registered Camps
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/dashboard/users">
-              <FaUsers></FaUsers>
-              All Users
-            </NavLink>
-          </li>
                 </> 
-}
+            }
 
             {  isParticipant && 
                 <>
@@ -77,12 +73,6 @@ const Dashboard = () => {
             <NavLink to="/dashboard/registered-camps">
               <FaList></FaList>
               Registered Camps
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/dashboard/payment-history">
-              <FaHistory></FaHistory>
-              Payment History(Participant)
             </NavLink>
           </li>
           <li>

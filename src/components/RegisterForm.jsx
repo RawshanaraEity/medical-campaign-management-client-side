@@ -6,7 +6,7 @@ import useAuth from "../Hooks/useAuth";
 
 
 const RegisterForm = ({campData,onRegistration}) => {
-    const {campFees, _id} = campData
+    const {campFees, _id,campName,scheduledDate,scheduledTime,venueLocation} = campData
     
     const {user} = useAuth()
     const navigate = useNavigate()
@@ -39,7 +39,7 @@ const RegisterForm = ({campData,onRegistration}) => {
              gender: data.gender,
              interest: data.interest,
              campId: _id,
-             campFees
+             campFees,campName,scheduledDate,scheduledTime,venueLocation
 
         }
 
