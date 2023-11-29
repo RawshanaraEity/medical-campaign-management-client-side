@@ -1,24 +1,14 @@
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../../../Hooks/useAxiosPublic";
 import useRegister from "../../../../Hooks/useRegister";
+import { useQuery } from "@tanstack/react-query";
+import useAuth from "../../../../Hooks/useAuth";
 
 
 
 const RegisteredCampManage = () => {
-
-    // const [camps, loading, refetch] = useMediCamps();
     const axiosPublic = useAxiosPublic();
     const [register, ,refetch] = useRegister()
-    console.log(register.length);
-    const registerCampids = register.map(item => item.campFees)
-    console.log(registerCampids);
-    const id = registerCampids.map(camid => camid)
-    
-    console.log("camid", id);
-    // const [registerCamps, setRegisterCamps] = useState()
-
-    
-
   
     const handleDeleteItem = (item) => {
       Swal.fire({
@@ -52,12 +42,12 @@ const RegisteredCampManage = () => {
     return (
         <div>
       <div className="border-b-2">
-        <h2 className="text-4xl mb-5 text-center ">Registered Camps</h2>
+        <h2 className="text-4xl mb-10 text-center underline font-medium">Registered Camps</h2>
       </div>
       <div className="overflow-x-auto">
         <table className="table w-full">
           {/* head */}
-          <thead className="text-center">
+          <thead className="text-center bg-lime-200">
             <tr>
               <th>#</th>
               <th>Camp Name</th>
@@ -65,11 +55,10 @@ const RegisteredCampManage = () => {
               <th>Time</th>
               <th>Venue</th>
               <td>Camp Fees</td>
-              <td>status</td>
               <th>Action</th>
             </tr>
           </thead>
-          <tbody className="text-center">
+          <tbody className="text-center font-medium">
             {register.map((item, index) => (
               <tr key={item._id}>
                 <td>{index + 1}</td>
@@ -80,9 +69,6 @@ const RegisteredCampManage = () => {
                 <td>{item.scheduledTime}</td>
                 <td>{item. venueLocation}</td>
                 <td>$ {item.campFees}</td>
-                <td className="text-right">
-                 pending
-                </td>
                 <td>
                   <button
                     onClick={() => handleDeleteItem(item)}

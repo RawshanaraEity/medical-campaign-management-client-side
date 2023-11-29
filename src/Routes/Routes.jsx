@@ -17,6 +17,7 @@ import ParticipantProfile from "../Pages/Dashboard/ParticipantDashboard/Particip
 import ProfessionalProfile from "../Pages/Dashboard/ProfessionalDAshboard/ProfessionalProfile";
 import PartiRegisterCamp from "../Pages/Dashboard/ParticipantDashboard/PartiRegisterCamp";
 import Payment from "../Pages/Dashboard/ParticipantDashboard/Payment";
+import PaymentHistory from "../Pages/Dashboard/ParticipantDashboard/PaymentHistory";
 
 
 
@@ -97,6 +98,10 @@ export const router = createBrowserRouter([
                 {
                     path: '/dashboard/payment',
                     element: <Payment></Payment>
+                },
+                {
+                    path: '/dashboard/paymentHistory',
+                    element: <PaymentHistory></PaymentHistory>
                 },
 
                  // professional route

@@ -24,8 +24,8 @@ const Dashboard = () => {
 
 
   return (
-    <div className="flex flex-col md:flex-row ">
-      <div className="w-full md:w-64  min-h-screen bg-lime-700 text-white ">
+    <div className="flex flex-col lg:flex-row ">
+      <div className="w-full lg:w-64  min-h-screen bg-lime-700 text-white ">
         <ul className="menu p-4 text-base">
 
                {

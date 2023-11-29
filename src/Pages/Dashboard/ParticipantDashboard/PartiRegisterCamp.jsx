@@ -9,6 +9,15 @@ const PartiRegisterCamp = () => {
     const {user} = useAuth()
     const axiosPublic = useAxiosPublic()
 
+
+    const { data: payments = [] } = useQuery({
+        queryKey: ["payments", user?.email],
+        queryFn: async () => {
+          const res = await axiosPublic.get(`/payments/${user?.email}`);
+          return res.data;
+        },
+      });
+
     const { data , refetch} = useQuery({
         queryKey: ["registeredCamp", user?.email],
         queryFn: async () => {
@@ -17,9 +26,11 @@ const PartiRegisterCamp = () => {
         },
       });
 
-      console.log(data);
+    //   console.log(data);
 
       const totalPrice = data?.reduce((total, item) => total+item?.campFees ,0)
+
+
 
       const handleDeleteItem = (item) => {
         Swal.fire({
@@ -90,8 +101,8 @@ const PartiRegisterCamp = () => {
                   <td>{item.scheduledTime}</td>
                   <td>{item. venueLocation}</td>
                   <td>$ {item.campFees}</td>
-                  <td className="text-right">
-                   pending
+                  <td className="text-right text-yellow-500 font-bold">
+                   {payments?.map(payment =>payment.status)}
                   </td>
                   <td>
                     <button

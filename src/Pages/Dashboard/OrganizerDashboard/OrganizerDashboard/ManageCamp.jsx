@@ -44,7 +44,7 @@ const ManageCamp = () => {
       <div className="overflow-x-auto">
         <table className="table w-full">
           {/* head */}
-          <thead className="text-center">
+          <thead className="text-center bg-lime-200 ">
             <tr>
               <th>#</th>
               <th>Image</th>
@@ -55,7 +55,7 @@ const ManageCamp = () => {
               <th>Delete</th>
             </tr>
           </thead>
-          <tbody className="text-center">
+          <tbody className="text-center font-medium">
             {camps.map((item, index) => (
               <tr key={item._id}>
                 <td>{index + 1}</td>
@@ -104,3 +104,4 @@ const ManageCamp = () => {
 };
 
 export default ManageCamp;
+
