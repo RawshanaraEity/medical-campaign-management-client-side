@@ -1,8 +1,5 @@
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../../../Hooks/useAxiosPublic";
-import useMediCamps from "../../../../Hooks/useMediCamps";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import useRegister from "../../../../Hooks/useRegister";
 
 

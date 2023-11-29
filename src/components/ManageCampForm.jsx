@@ -55,7 +55,7 @@ const ManageCampForm = () => {
               healthcareProfessionals: data.healthcareProfessionals.split(',').map(item => item.trim()),
               benefits: data.benefits.split(',').map(item => item.trim()),
               targetAudience: data.targetAudience,
-              participantCount: data.participantCount,
+              participantCount: parseFloat(data.participantCount),
               description: data.description,
               image: res.data.data.display_url
           }

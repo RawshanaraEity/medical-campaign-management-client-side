@@ -15,6 +15,7 @@ import RegisteredCampManage from "../Pages/Dashboard/OrganizerDashboard/Organize
 import ManageCampForm from "../components/ManageCampForm";
 import ParticipantProfile from "../Pages/Dashboard/ParticipantDashboard/ParticipantProfile";
 import ProfessionalProfile from "../Pages/Dashboard/ProfessionalDAshboard/ProfessionalProfile";
+import PartiRegisterCamp from "../Pages/Dashboard/ParticipantDashboard/PartiRegisterCamp";
 
 
 
@@ -83,9 +84,13 @@ export const router = createBrowserRouter([
                
                 // participant route
                 {
-                    path: '/dashboard//participant-profile',
+                    path: '/dashboard/participant-profile',
                     element: <ParticipantProfile></ParticipantProfile>
 
+                },
+                {
+                    path: '/dashboard/registered-camps',
+                    element: <PartiRegisterCamp></PartiRegisterCamp>
                 },
 
                  // professional route
