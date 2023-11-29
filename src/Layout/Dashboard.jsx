@@ -5,6 +5,7 @@ import {
   FaHistory,
   FaHome,
   FaList,
+  FaMoneyCheck,
   FaPlus,
   FaSearch,
   FaStar,
@@ -78,8 +79,8 @@ const Dashboard = () => {
 
           <li>
             <NavLink to="/dashboard/payment">
-              <FaHistory></FaHistory>
-              Payment 
+              <FaMoneyCheck></FaMoneyCheck>
+             Make Payment 
             </NavLink>
           </li>
           <li>

@@ -62,13 +62,13 @@ const PartiRegisterCamp = () => {
         <div>
         <div className="border-b-2">
           <h2 className="text-4xl mb-10 text-center font-semibold underline">Registered Camps</h2>
-          <div className="flex justify-evenly mb-8">
+          <div className="flex justify-between mb-8">
             <h2 className="text-4xl font-bold">Total Registration: {data?.length} </h2>
             <h2 className="text-4xl font-bold">Total Fees: ${totalPrice} </h2>
 
             {
               data?.length ? <Link to='/dashboard/payment'>
-              <button className="btn bg-lime-500">Pay</button>
+              <button className="btn rounded-none text-white bg-lime-500">Make Payment</button>
               </Link> : <button disabled className="btn bg-lime-500">Pay</button>
 
             }

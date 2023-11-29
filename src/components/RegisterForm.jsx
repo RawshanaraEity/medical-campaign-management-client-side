@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
-import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 
 
@@ -9,8 +8,6 @@ const RegisterForm = ({campData,onRegistration}) => {
     const {campFees, _id,campName,scheduledDate,scheduledTime,venueLocation} = campData
     
     const {user} = useAuth()
-    const navigate = useNavigate()
-    const location = useLocation()
     const axiosPublic = useAxiosPublic()
  
     
@@ -59,22 +56,7 @@ const RegisterForm = ({campData,onRegistration}) => {
           }
         })
       }
-      else{
-        Swal.fire({
-          title: "You are not logged in?",
-          text: "Please login for Camp Register",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Yes, login!"
-        }).then((result) => {
-          if (result.isConfirmed) {
-          //  send the user to the login page
-          navigate('/login', {state: {from: location}})
-          }
-        });
-      }
+      
     }
 
 
