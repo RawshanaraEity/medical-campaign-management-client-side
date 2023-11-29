@@ -75,10 +75,11 @@ const Dashboard = () => {
               Registered Camps
             </NavLink>
           </li>
+
           <li>
-            <NavLink to="/dashboard/review">
-              <FaAd></FaAd>
-              Add Review
+            <NavLink to="/dashboard/payment">
+              <FaHistory></FaHistory>
+              Payment 
             </NavLink>
           </li>
           <li>
