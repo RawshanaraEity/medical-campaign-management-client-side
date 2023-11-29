@@ -32,19 +32,22 @@ const NavBar = () => {
          Available Camps
         </NavLink>
       </li>
+
+
+     {
+      user &&  <li className="text-white text-lg font-medium mr-2">
+      <NavLink
+        to="/dashboard"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "text-lime-400" : ""
+        }
+      >
+        Dashboard
+      </NavLink>
+    </li>
+     }
+
       <li className="text-white text-lg font-medium mr-2">
-        
-        <NavLink
-          to="/dashboard"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-lime-400" : ""
-          }
-        >
-          Dashboard
-        </NavLink>
-      </li>
-      <li className="text-white text-lg font-medium mr-2">
-        
         <NavLink
           to="/contact"
           className={({ isActive, isPending }) =>

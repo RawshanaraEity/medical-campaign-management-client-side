@@ -13,17 +13,21 @@ import {
 } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useOrganizer from "../Hooks/useOrganizer";
+import useParticipant from "../Hooks/useParticipant";
+import useProfessional from "../Hooks/useProfessional";
 
 const Dashboard = () => {
-    const [isOrganizer, isOrganizerLoading] = useOrganizer()
-    console.log('is organizer',isOrganizer);
+    const [isOrganizer, isOrganizerLoading] = useOrganizer([])
+    const [isParticipant] = useParticipant()
+    const [isProfessional] = useProfessional()
+    console.log('is organizer',isOrganizer, isParticipant, isProfessional);
   return (
     <div className="flex flex-col md:flex-row ">
       <div className="w-full md:w-64  min-h-screen bg-lime-700 text-white ">
         <ul className="menu p-4 text-base">
 
                {
-                !isOrganizer ?
+                isOrganizer &&
                 <>
                {/* organizer dashboard */}
                      <li>
@@ -57,7 +61,9 @@ const Dashboard = () => {
             </NavLink>
           </li>
                 </> 
-                    :
+}
+
+            {  isParticipant && 
                 <>
                 
             {/* participant dashboard */}
@@ -97,19 +103,21 @@ const Dashboard = () => {
               Feedback and Ratings
             </NavLink>
           </li>
+                </>
+            }
 
-          {/* professionals dashboard */}
+                {/* professionals dashboard */}
+          { 
+
+            isProfessional && 
           <li>
             <NavLink to="/dashboard/professional-profile">
               <FaUser></FaUser>
               Professionals Profile
             </NavLink>
-          </li>
-                </>
-
-               } 
-
-         
+          </li> 
+          
+          }
          
 
           {/* shared navlinks */}

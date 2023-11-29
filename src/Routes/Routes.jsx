@@ -16,6 +16,8 @@ import RegisteredCampManage from "../Pages/Dashboard/OrganizerDashboard/Organize
 import ManageCampForm from "../components/ManageCampForm";
 import ParticipantProfile from "../Pages/Dashboard/ParticipantDashboard/ParticipantProfile";
 import ProfessionalProfile from "../Pages/Dashboard/ProfessionalDAshboard/ProfessionalProfile";
+import OrganizerRoute from "./OrganizerRoute";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -53,35 +55,56 @@ export const router = createBrowserRouter([
         },
         {
             path: '/dashboard',
+            // element: <PrivateRoute>
+            //     <Dashboard></Dashboard>
+            // </PrivateRoute>,
             element: <Dashboard></Dashboard>,
             children: [
                 // organizer routes
                 {
                     path: '/dashboard/organizer-profile',
-                    element: <OrganizerProfile></OrganizerProfile>
+                    // element: <OrganizerRoute>
+                    //     <OrganizerProfile></OrganizerProfile>
+                    // </OrganizerRoute>
+                    element: <OrganizerProfile></OrganizerProfile>,
 
                 },
                 {
                     path: '/dashboard/add-a-camp',
-                    element: <AddCamp></AddCamp>
+                    // element: <OrganizerRoute>
+                    //     <AddCamp></AddCamp>
+                    // </OrganizerRoute>
+                    element: <AddCamp></AddCamp>,
 
                 },
                 {
                     path: '/dashboard/manage-camps',
+                    // element: <OrganizerRoute>
+                    //     <ManageCamp></ManageCamp>
+                    // </OrganizerRoute>
                     element: <ManageCamp></ManageCamp>
 
                 },
                 {
                     path: '/dashboard/update-camp/:id',
+                    // element: <OrganizerRoute>
+                    //     <ManageCampForm></ManageCampForm>
+                    // </OrganizerRoute>
                     element: <ManageCampForm></ManageCampForm>
                 },
                 {
                     path: '/dashboard/manage-registered-camps',
-                    element: <RegisteredCampManage></RegisteredCampManage>
+                    // element: <OrganizerRoute>
+                    //     <RegisteredCampManage></RegisteredCampManage>
+                    // </OrganizerRoute>
+                    element:  <RegisteredCampManage></RegisteredCampManage>
 
                 },
                 {
                     path: '/dashboard/users',
+                    // element: <OrganizerRoute>
+                    //     <Users></Users>
+                    // </OrganizerRoute>
                     element: <Users></Users>
 
                 },

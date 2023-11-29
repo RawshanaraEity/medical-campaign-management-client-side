@@ -2,7 +2,7 @@ import useAuth from "../../../Hooks/useAuth";
 
 const OrganizerProfile = () => {
   const { user } = useAuth();
-  console.log(user);
+  // console.log(user);
   return (
     <div>
       <div className="card md:w-96 items-center mx-auto bg-base-100 shadow-xl">
