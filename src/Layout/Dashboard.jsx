@@ -12,15 +12,21 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import useOrganizer from "../Hooks/useOrganizer";
 
 const Dashboard = () => {
+    const [isOrganizer, isOrganizerLoading] = useOrganizer()
+    console.log('is organizer',isOrganizer);
   return (
     <div className="flex flex-col md:flex-row ">
       <div className="w-full md:w-64  min-h-screen bg-lime-700 text-white ">
         <ul className="menu p-4 text-base">
 
-            {/* organizer dashboard */}
-          <li>
+               {
+                !isOrganizer ?
+                <>
+               {/* organizer dashboard */}
+                     <li>
             <NavLink to="/dashboard/organizer-profile">
               <FaUser></FaUser>
               Organizer Profile
@@ -50,6 +56,10 @@ const Dashboard = () => {
               All Users
             </NavLink>
           </li>
+                </> 
+                    :
+                <>
+                
             {/* participant dashboard */}
           <li>
             <NavLink to="/dashboard/participant-profile">
@@ -95,6 +105,12 @@ const Dashboard = () => {
               Professionals Profile
             </NavLink>
           </li>
+                </>
+
+               } 
+
+         
+         
 
           {/* shared navlinks */}
           <div className="divider"></div>

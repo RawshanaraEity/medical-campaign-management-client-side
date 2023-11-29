@@ -14,6 +14,8 @@ import ManageCamp from "../Pages/Dashboard/OrganizerDashboard/OrganizerDashboard
 import Users from "../Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/Users";
 import RegisteredCampManage from "../Pages/Dashboard/OrganizerDashboard/OrganizerDashboard/RegisteredCampManage";
 import ManageCampForm from "../components/ManageCampForm";
+import ParticipantProfile from "../Pages/Dashboard/ParticipantDashboard/ParticipantProfile";
+import ProfessionalProfile from "../Pages/Dashboard/ProfessionalDAshboard/ProfessionalProfile";
 
 
 
@@ -81,6 +83,19 @@ export const router = createBrowserRouter([
                 {
                     path: '/dashboard/users',
                     element: <Users></Users>
+
+                },
+                // participant route
+                {
+                    path: '/dashboard//participant-profile',
+                    element: <ParticipantProfile></ParticipantProfile>
+
+                },
+
+                 // professional route
+                 {
+                    path: '/dashboard//professional-profile',
+                    element: <ProfessionalProfile></ProfessionalProfile>
 
                 },
                
