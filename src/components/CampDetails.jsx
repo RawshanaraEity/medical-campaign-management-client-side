@@ -5,6 +5,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaCalendar, FaClock } from "react-icons/fa";
 import RegisterForm from "./RegisterForm";
 import useParticipant from "../Hooks/useParticipant";
+import { Helmet } from "react-helmet";
 
 
 const CampDetails = () => {
@@ -35,6 +36,10 @@ const fetchCampData = useCallback(async () => {
 
   //   console.log(campData);
   return (
+   <div>
+     <Helmet>
+        <title>MediCamp/Camp Details</title>
+      </Helmet>
     <div className="mb-20 bg-gray-100 shadow-xl py-20">
       <div className="grid grid-cols-1 md:grid-cols-3  px-5  lg:px-16">
         <div className="col-span-2 space-y-5">
@@ -120,6 +125,7 @@ const fetchCampData = useCallback(async () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

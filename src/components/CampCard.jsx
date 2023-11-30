@@ -1,9 +1,11 @@
+
 import { FaCalendar, FaClock } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const CampCard = ({ camp }) => {
   return (
     <div>
+      
       <div className="card bg-base-100 shadow-xl">
         <figure className="px-5 pt-5">
           <img src={camp?.image} alt="camp" className="rounded-xl h-64" />

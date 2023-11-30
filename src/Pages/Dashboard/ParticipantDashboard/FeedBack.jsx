@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import useAuth from "../../../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 
 const FeedBack = () => {
@@ -60,6 +61,9 @@ const FeedBack = () => {
 
   return (
     <div>
+        <Helmet>
+        <title>MediCamp/Dashboard/Feedback and Rating</title>
+      </Helmet>
         <div>
             <h2 className="text-4xl font-medium text-center">Leave Your FeedBack</h2>
         </div>

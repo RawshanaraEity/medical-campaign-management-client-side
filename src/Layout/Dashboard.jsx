@@ -16,6 +16,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import useOrganizer from "../Hooks/useOrganizer";
 import useParticipant from "../Hooks/useParticipant";
 import useProfessional from "../Hooks/useProfessional";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
     const [isOrganizer] = useOrganizer([])
@@ -25,6 +26,10 @@ const Dashboard = () => {
 
 
   return (
+    <div>
+        <Helmet>
+        <title>MediCamp/Dashboard</title>
+      </Helmet>
     <div className="flex flex-col lg:flex-row ">
       <div className="w-full lg:w-64  min-h-screen bg-lime-700 text-white ">
         <ul className="menu p-4 text-base">
@@ -138,6 +143,7 @@ const Dashboard = () => {
       <div className="flex-1 p-5 lg:p-8">
         <Outlet></Outlet>
       </div>
+    </div>
     </div>
   );
 };
