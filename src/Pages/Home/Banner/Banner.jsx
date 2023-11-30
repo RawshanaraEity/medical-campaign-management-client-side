@@ -4,7 +4,12 @@ import bannnerimg3 from '../../../assets/images/banner3.jpg'
 import bannnerimg4 from '../../../assets/images/banner.jpg'
 
 
+
+
 const Banner = () => {
+
+  
+
   return (
     <div className=''>
       <div className="carousel  w-full">

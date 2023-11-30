@@ -10,7 +10,7 @@ const CampCard = ({ camp }) => {
         </figure>
         <div className="card-body h-96 space-y-4 relative">
           <h2 className="card-title text-2xl">{camp?.campName}</h2>
-          <h2 className="">{camp?.description.slice(0, 150)}</h2>
+          <h2 className="">{camp?.description?.slice(0, 150)}</h2>
 
           <div>
             <div className="flex items-center text-gray-500 gap-2">

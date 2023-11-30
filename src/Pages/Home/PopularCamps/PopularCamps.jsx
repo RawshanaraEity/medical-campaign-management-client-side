@@ -51,7 +51,7 @@ const PopularCamps = () => {
 
       <div className="text-center">
         <Link to="/availableCamps">
-          <button className="btn bg-gray-500 text-white">Available Camp</button>
+          <button className="btn bg-lime-500 text-white">See All Camp</button>
         </Link>
       </div>
     </div>
