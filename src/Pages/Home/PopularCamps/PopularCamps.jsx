@@ -30,7 +30,7 @@ const PopularCamps = () => {
       <h2 className="text-4xl text-center font-semibold">
         Popular Medical Camps
       </h2>
-
+      
       <div className="flex text-center justify-center mt-10">
         <select
           className=" p-2 bg-lime-500 text-white"

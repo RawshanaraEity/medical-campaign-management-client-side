@@ -4,7 +4,7 @@ import {  FaCheckSquare } from "react-icons/fa";
 const AboutUs = () => {
     return (
         <div>
-            <div className="flex gap-5 lg:gap-20 px-5 lg:px-0 flex-col md:flex-row justify-between items-center">
+            <div className=" flex gap-5 lg:gap-20 px-5 lg:px-0 flex-col md:flex-row justify-between items-center">
                 <div className="flex-1 bg-lime-300">
                     <img className="p-5" src="https://i.ibb.co/5sq31nv/aboutus.jpg" alt="" />
                 </div>
