@@ -1,8 +1,12 @@
-# React + Vite
+# MediCamp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- 
+## [Website live link]()
 
-Currently, two official plugins are available:
+Click here for the projects live link: []() -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* In our website you can explore different Medical Campaign Experience.
+* You can see Full Details information about our campaign .
+* If you are interested You can Participate our campaign.
+* Interesting payment system.
+* Organizer can add camp and also update if they need.
