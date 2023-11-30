@@ -42,7 +42,7 @@ const Register = () => {
 
           axiosPublic.post("/users", userInfo).then((res) => {
         if (res.data.insertedId) {
-          console.log("user added to the database");
+          // console.log("user added to the database");
           reset();
           Swal.fire({
             position: "top-end",
@@ -64,11 +64,11 @@ const Register = () => {
       <Helmet>
         <title>MediCamp/Signup</title>
       </Helmet>
-      <div className=" bg-base-200">
-        <h1 className="text-5xl pt-10 text-center font-bold">SignUP!</h1>
-          <div className="card mt-10 w-5/12 mx-auto shadow-2xl bg-base-100">
+      <div className="px-5 md:px-0 bg-base-200">
+        <h1 className="text-5xl pt-10  text-center font-bold">SignUP!</h1>
+          <div className="card mt-10 md:w-5/12  mx-auto shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-             <div className="flex gap-5">
+             <div className="flex flex-col  gap-5">
              <div className="form-control flex-1">
                 <label className="label">
                   <span className="label-text">Name</span>
