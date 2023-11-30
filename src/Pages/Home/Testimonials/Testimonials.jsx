@@ -38,7 +38,7 @@ const Testimonials = () => {
   
 
   return (
-    <div className="mt-10 bg-lime-50">
+    <div className=" bg-lime-50 ">
      <h2 className="text-5xl text-center font-semibold pt-16">Our Testimonials</h2>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         {reviews?.map((review) => (

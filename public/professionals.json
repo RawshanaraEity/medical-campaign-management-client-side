@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Dr. John Doe",
+      "specialist": "General Practitioner",
+      "image": "https://i.ibb.co/mJs4XnZ/dr2.png",
+      "about": ["General Check-ups", "Internal Medicine", "Health Consultation"]
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialist": "Gynecologist",
+      "image": "https://i.ibb.co/0n5vRDF/dr1.png",
+      "about": ["Women's Health", "Prenatal Care", "Reproductive Health"]
+    },
+    {
+      "name": "Thomas Paul",
+      "specialist": "Paramedical Staff",
+      "image": "https://i.ibb.co/qFdHwjq/dr3.png",
+      "about": ["Patient Care", "Health Education", "Emergency Response"]
+    },
+    {
+      "name": "Dr.Zhala Conner",
+      "specialist": "Cardiologist",
+      "image": "  https://i.ibb.co/3kD9Q0Q/dr4.jpg",
+      "about": ["Cardiac Screening", "Nutrition Counseling", "Fitness Assessments"]
+    }
+    
+  ]
+
+
+
