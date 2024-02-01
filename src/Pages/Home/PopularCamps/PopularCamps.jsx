@@ -31,9 +31,9 @@ const PopularCamps = () => {
         Popular Medical Camps
       </h2>
       
-      <div className="flex text-center justify-center mt-10">
+      <div className=" flex text-center justify-center mt-10">
         <select
-          className=" p-2 bg-lime-500 text-white"
+          className="p-3 rounded-md bg-lime-500 text-white"
           onChange={(e) => setSortData(e.target.value)}
           value={sortData}
         >

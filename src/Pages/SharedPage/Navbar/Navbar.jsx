@@ -22,9 +22,7 @@ const NavBar = () => {
         </NavLink>
       </li>
 
-     {
-      user && 
-       <> 
+     
        <li className="text-white text-lg font-medium mr-2">
       <NavLink
         to="/availableCamps"
@@ -35,7 +33,9 @@ const NavBar = () => {
        Available Camps
       </NavLink>
       </li>  
-
+      {
+      user && 
+       <> 
        <li className="text-white text-lg font-medium mr-2">
       <NavLink
         to="/dashboard"

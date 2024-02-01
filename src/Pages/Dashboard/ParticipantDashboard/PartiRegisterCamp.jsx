@@ -64,14 +64,14 @@ const PartiRegisterCamp = () => {
           <h2 className="text-4xl mb-10 text-center font-semibold underline">Registered Camps</h2>
           <div className="flex justify-between mb-8">
             <h2 className="text-4xl font-bold">Total Registration: {data?.length} </h2>
-            <h2 className="text-4xl font-bold">Total Fees: ${totalPrice} </h2>
+            {/* <h2 className="text-4xl font-bold">Total Fees: ${totalPrice} </h2> */}
 
-            {
+            {/* {
               data?.length ? <Link to='/dashboard/payment'>
               <button className="btn rounded-none text-white bg-lime-500">Make Payment</button>
               </Link> : <button disabled className="btn bg-lime-500">Pay</button>
 
-            }
+            } */}
             
             </div>
         </div>
@@ -102,7 +102,12 @@ const PartiRegisterCamp = () => {
                   <td>{item. venueLocation}</td>
                   <td>$ {item.campFees}</td>
                   <td className="text-right text-yellow-500 font-bold">
-                   {payments?.map(payment =>payment.status)}
+                   {/* {payments?.map(payment =>payment.status)} */}
+                   {
+                    <Link to='/dashboard/payment'>
+              <button className="btn btn-sm rounded-none text-white bg-lime-500">Pay</button>
+              </Link>
+                   }
                   </td>
                   <td>
                     <button

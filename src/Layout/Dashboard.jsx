@@ -1,5 +1,4 @@
 import {
-  FaAd,
   FaEdit,
   FaEnvelope,
   FaHistory,
@@ -10,7 +9,6 @@ import {
   FaSearch,
   FaStar,
   FaUser,
-  FaUsers,
 } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useOrganizer from "../Hooks/useOrganizer";
