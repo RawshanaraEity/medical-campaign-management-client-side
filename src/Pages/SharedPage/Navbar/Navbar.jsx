@@ -15,7 +15,7 @@ const NavBar = () => {
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " text-lime-400" : ""
+            isPending ? "pending" : isActive ? " text-lime-300" : ""
           }
         >
           Home
@@ -27,7 +27,7 @@ const NavBar = () => {
       <NavLink
         to="/availableCamps"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "text-lime-400" : ""
+          isPending ? "pending" : isActive ? "text-lime-300" : ""
         }
       >
        Available Camps
@@ -40,7 +40,7 @@ const NavBar = () => {
       <NavLink
         to="/dashboard"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "text-lime-400" : ""
+          isPending ? "pending" : isActive ? "text-lime-300" : ""
         }
       >
         Dashboard
@@ -53,7 +53,7 @@ const NavBar = () => {
         <NavLink
           to="/contact"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-lime-400" : ""
+            isPending ? "pending" : isActive ? "text-lime-300" : ""
           }
         >
           Contact Us
@@ -93,7 +93,7 @@ const NavBar = () => {
           </div>
           <div className=" flex items-center">
             <img src={logo} className="h-20" alt="" />
-            <p className="text-3xl text-lime-500 font-bold">MediCamp</p>
+            <p className="text-3xl text-lime-300 font-bold">MediCamp</p>
           </div>
 
         </div>
@@ -122,7 +122,7 @@ const NavBar = () => {
                   </li>
                   <li>
                   <button
-                      className="btn  border-none rounded-none  bg-lime-600 text-white  w-full mx-auto pt-3 "
+                      className="btn  border-none rounded  bg-lime-600 text-white  w-full mx-auto pt-3 "
                       onClick={logOut}
                     >
                       LogOut
@@ -135,7 +135,7 @@ const NavBar = () => {
             </div>
            ) : ( 
             <Link to="/login">
-              <button className="btn rounded-none border-none text-lg bg-lime-600 text-white">Login</button>
+              <button className="btn rounded border-none text-lg bg-lime-600 text-white">Login</button>
             </Link>
            )} 
         </div>

@@ -100,7 +100,7 @@ const fetchCampData = useCallback(async () => {
           {
             isParticipant && 
               <button
-            className="btn rounded-none bg-lime-500 text-xl text-white  px-7"
+            className="btn rounded bg-lime-500 text-xl text-white  px-7"
             onClick={() => document.getElementById("my_modal_3").showModal()}
           >
             Join Camp

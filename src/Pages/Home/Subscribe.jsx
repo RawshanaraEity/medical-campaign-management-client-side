@@ -34,19 +34,19 @@ const Subscribe = () => {
               Do not miss. Get our latest news & update regularly
             </p>
           </div>
-          <div className="lg:flex-1  border bg-[rgba(156,219,135,0.2)]  shadow-2xl ">
+          <div className="lg:flex-1 rounded  border bg-[rgba(156,219,135,0.2)]  shadow-2xl  ">
             <form onSubmit={handleSubscribe} className="card-body  items-center flex-row gap-0">
               <div className="w-full ">
                 <input
                   type="email"
                   name="email"
                   placeholder="Enter Your Email"
-                  className="input  w-full md:py-9 rounded-none text-black"
+                  className="input  w-full md:py-9 rounded text-black"
                   required
                 />
               </div>
               <div className=" ">
-                <button className="btn bg-lime-500  md:h-[76px]  text-white rounded-none text-xl font-bold capitalize">
+                <button className="btn bg-lime-500  md:h-[76px]  text-white rounded text-xl font-bold capitalize">
                   Subscribe
                 </button>
               </div>

@@ -50,6 +50,7 @@ const Login = () => {
         <div className="py-20">
           <div className="card  w-96 mx-auto  shadow-2xl bg-base-100">
             <h1 className="text-5xl text-center font-bold pt-5">Login now!</h1>
+            
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
